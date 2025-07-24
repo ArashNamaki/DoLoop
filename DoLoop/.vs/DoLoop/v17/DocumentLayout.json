@@ -9,6 +9,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{089AFCB0-B10B-4762-A818-378099CB9F11}|DoLoop.csproj|f:\\myprojects\\git-projects\\doloop\\doloop\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{089AFCB0-B10B-4762-A818-378099CB9F11}|DoLoop.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{089AFCB0-B10B-4762-A818-378099CB9F11}|DoLoop.csproj|f:\\myprojects\\git-projects\\doloop\\doloop\\resourses\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{089AFCB0-B10B-4762-A818-378099CB9F11}|DoLoop.csproj|solutionrelative:resourses\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -27,6 +31,18 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Styles.xaml",
+              "DocumentMoniker": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\Resourses\\Styles.xaml",
+              "RelativeDocumentMoniker": "Resourses\\Styles.xaml",
+              "ToolTip": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\Resourses\\Styles.xaml",
+              "RelativeToolTip": "Resourses\\Styles.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-23T22:28:22.427Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -48,7 +64,7 @@
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAjwBQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-23T20:52:21.249Z",
               "EditorCaption": ""

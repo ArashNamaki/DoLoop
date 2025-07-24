@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:DoLoop"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary Source="/Resourses/Styles.xaml"/>
     </Application.Resources>
 </Application>
