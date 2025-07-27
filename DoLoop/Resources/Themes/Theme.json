@@ -1,0 +1,8 @@
+{
+    "UI": "#8AEA92",
+    "UI_Background": "#031104",
+    "UI_Foreground": "#031104",
+    "NormalTask": "#B9ED97",
+    "ImportantTask": "#6BD425",
+    "QuickTask": "#F2BB05"
+}

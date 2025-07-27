@@ -19,5 +19,19 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
+
+        
+
+
+    }
+
+    private void MinimizeBtn_Click(object sender, RoutedEventArgs e)
+    {
+
+    }
+
+    private void CloseBtn_Click(object sender, RoutedEventArgs e)
+    {
+
     }
 }

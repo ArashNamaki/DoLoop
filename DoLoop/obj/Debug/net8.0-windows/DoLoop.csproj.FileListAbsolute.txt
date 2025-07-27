@@ -19,5 +19,6 @@ F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\refint\DoLoop.
 F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\DoLoop.pdb
 F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\DoLoop.genruntimeconfig.cache
 F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\ref\DoLoop.dll
-F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\Resourses\Styles.baml
 F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\App.baml
+F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\Resources\Styles\Icons.baml
+F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\Resources\Styles\Styles.baml
