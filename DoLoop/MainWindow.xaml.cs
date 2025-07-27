@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using Accessibility;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -20,18 +21,25 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
 
-        
-
-
     }
 
     private void MinimizeBtn_Click(object sender, RoutedEventArgs e)
     {
-
+        this.WindowState = WindowState.Minimized;
     }
 
     private void CloseBtn_Click(object sender, RoutedEventArgs e)
     {
+       Application.Current.Shutdown();
+    }
 
+    private void AppBar_MouseDown(object sender, MouseButtonEventArgs e)
+    {
+        
+    }
+
+    private void DragWindow(object sender, MouseButtonEventArgs e)
+    {
+        this.DragMove();
     }
 }

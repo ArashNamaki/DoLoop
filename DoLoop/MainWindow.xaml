@@ -7,108 +7,113 @@
         mc:Ignorable="d"
         Title="DoLoop" MinHeight="450" MinWidth="450"
         Height="700" Width="600" SizeToContent="WidthAndHeight"
-        ResizeMode="CanResizeWithGrip" WindowStyle="None"
-        AllowsTransparency="True" Background="White"
-        Icon="{StaticResource AppLogo}" WindowStartupLocation="CenterOwner">
-
-    <Grid Name="AppWindow">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-
-        <!--Appbar-->
-        <Grid Grid.Row="0" Name="AppBar" Margin="9,2" VerticalAlignment="Center">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="auto" />
-                <ColumnDefinition Width="auto" />
-            </Grid.ColumnDefinitions>
-            <Grid Grid.Column="0"/>
-            <Grid Grid.Column="1"/>
-            <Button Grid.Column="2" Name="MinimizeBtn" Template="{StaticResource AppbarMinimizeButton}" Click="MinimizeBtn_Click"/>
-            <Button Grid.Column="3" Name="CloseBtn" Template="{StaticResource AppbarCloseButton}" IsCancel="True" Click="CloseBtn_Click"/>
-        </Grid>
-
-        <!--Active Tab-->
-        <Grid Grid.Row="1" Name="ActiveTab" Margin="9,2">
+        ResizeMode="CanResize" WindowStyle="None"
+        AllowsTransparency="True" Background="Transparent"
+        Icon="{StaticResource AppLogo}" WindowStartupLocation="CenterOwner" MouseDown="DragWindow">
+    <Border Style="{StaticResource WindowStyles}">
+        <Grid Name="AppWindow" Margin="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <!--ActiveBar-->
-            <Grid Grid.Row="0" Name="ActiveBar">
+            <!--Appbar-->
+            <Grid Grid.Row="0" Name="AppBar" Margin="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="auto"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
                 </Grid.ColumnDefinitions>
-                <Grid Grid.Column="0" Name="ActiveList_Icon">
+                <Grid Grid.Column="0"/>
+                <Grid Grid.Column="1"/>
+                <Button Grid.Column="2" Name="MinimizeBtn" VerticalAlignment="Center" HorizontalAlignment="Center" Template="{StaticResource AppbarMinimizeButton}" Click="MinimizeBtn_Click"/>
+                <Button Grid.Column="3" Name="CloseBtn" Template="{StaticResource AppbarCloseButton}" IsCancel="True" Click="CloseBtn_Click"/>
+            </Grid>
 
-                </Grid>
+            <!--Active Tab-->
+            <Grid Grid.Row="1" Name="ActiveTab">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="7*"/>
+                    <ColumnDefinition Width="33*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
 
-                <Grid Grid.Column="1" Name="ActiveList_Title">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid Grid.Column="0" Name="BoardTitle">
-                        <WrapPanel>
-                            
-                        </WrapPanel>
-                    </Grid>
-                    <Grid Grid.Column="1" Name="Date">
-                        <WrapPanel>
-
-                        </WrapPanel>
-                    </Grid>
-                </Grid>
-
-                <!--Main-->
-                <Grid Grid.Row="1" Name="Main">
+                <!--ActiveBar-->
+                <Grid Grid.Row="0" Name="ActiveBar" Grid.ColumnSpan="2" Margin="0,0,0,667" Grid.RowSpan="2">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0" Name="ActiveList_Icon">
 
-                    <!--SideBar-->
-                    <Grid Grid.Column="0" Name="SideBar">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="auto"/>
-                        </Grid.RowDefinitions>
-                        <Grid Grid.Row="0" Name="SideBar_Top">
+                    </Grid>
 
+                    <Grid Grid.Column="1" Name="ActiveList_Title">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0" Name="BoardTitle">
+                            <WrapPanel>
+
+                            </WrapPanel>
                         </Grid>
-                        <Grid Grid.Row="1" Name="SideBar_Middle">
+                        <Grid Grid.Column="1" Name="Date">
+                            <WrapPanel>
 
-                        </Grid>
-                        <Grid Grid.Row="2" Name="SideBar_Bottom">
-
+                            </WrapPanel>
                         </Grid>
                     </Grid>
 
-                    <!--MainPanel-->
-                    <Grid Grid.Column="1" Name="MainPanel">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="auto"/>
-                        </Grid.RowDefinitions>
-                        <Grid Grid.Row="0" Name="TaskList">
+                    <!--Main-->
+                    <Grid Grid.Row="1" Name="Main">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
 
+                        <!--SideBar-->
+                        <Grid Grid.Column="0" Name="SideBar">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0" Name="SideBar_Top">
+
+                            </Grid>
+                            <Grid Grid.Row="1" Name="SideBar_Middle">
+
+                            </Grid>
+                            <Grid Grid.Row="2" Name="SideBar_Bottom">
+
+                            </Grid>
                         </Grid>
-                        <Grid Grid.Row="1" Name="InputBar">
 
+                        <!--MainPanel-->
+                        <Grid Grid.Column="1" Name="MainPanel">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0" Name="TaskList">
+
+                            </Grid>
+                            <Grid Grid.Row="1" Name="InputBar">
+
+                            </Grid>
                         </Grid>
                     </Grid>
+
                 </Grid>
+
 
             </Grid>
 
-
         </Grid>
-        
-    </Grid>
+    </Border>
 </Window>

@@ -46,6 +46,7 @@
     
     <!--Colors-->
     <Color x:Key="UIColor">#8AEA92</Color>
+    <Color x:Key="UIShadow">#118AEA92</Color>
     <Color x:Key="UI_BackgroundColor">#031104</Color>
     <Color x:Key="UI_ForegroundColor">#031104</Color>
     <Color x:Key="NormalColor">#B9ED97</Color>
@@ -54,6 +55,9 @@
     <Color x:Key="UI_Transparent">#00000000</Color>
 
     <SolidColorBrush x:Key="UIForeground" Color="{StaticResource UI_ForegroundColor}"/>
+    <SolidColorBrush x:Key="UIElements" Color="{StaticResource UIColor}"/>
+    <SolidColorBrush x:Key="UIBackground" Color="{StaticResource UI_ForegroundColor}"/>
+    <SolidColorBrush x:Key="UIOverlay" Color="{StaticResource UIShadow}"/>
     <SolidColorBrush x:Key="Transparent" Color="{StaticResource UI_Transparent}"/>
     <SolidColorBrush x:Key="Button" Color="{StaticResource UIColor}"/>
     <SolidColorBrush x:Key="ButtonIcon" Color="{StaticResource UI_ForegroundColor}"/>
@@ -67,41 +71,48 @@
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="BorderBrush" Value="Transparent"/>
         <Setter Property="BorderThickness" Value="0"/>
-        <Setter Property="CornerRadius" Value="5"/>
+
         <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="HorizontalAlignment" Value="Left"/>
-        <Setter Property="Width" Value="30" />
-        <Setter Property="Height" Value="30"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Width" Value="40"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="Padding" Value="8"/>
+        <Setter Property="TextBlock.FontFamily" Value="{StaticResource PrimaryIcon}"/>
+        <Setter Property="TextBlock.Background" Value="{StaticResource Transparent}"/>
+        <Setter Property="TextBlock.Foreground" Value="{StaticResource UIElements}"/>
+        <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+
+
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="{StaticResource Button}"/>
-                <Setter Property="TextBlock.Foreground" Value="{StaticResource UIForeground}"/>
+                <Setter Property="Background" Value="{StaticResource UIOverlay}"/>
             </Trigger>
         </Style.Triggers>
     </Style>
-    <Style x:Key="AppbarButtonTextStyles" TargetType="TextBlock">
-        <Setter Property="FontFamily" Value="{StaticResource PrimaryIcon}"/>
-        <Setter Property="Background" Value="{StaticResource Transparent}"/>
-        <Setter Property="Foreground" Value="{StaticResource UIForeground}"/>
 
-        <Setter Property="TextAlignment" Value="Center"/>
-    </Style>
-    
     <!--Appbar Buttons-->
     <ControlTemplate x:Key="AppbarCloseButton" x:Name="AppClose" TargetType="Button">
         <Border Style="{StaticResource AppbarButtonStyles}">
-             <TextBlock FontFamily="/Resources/Fonts/DoLoopV1.ttf#DoLoopV1" Text="{StaticResource CloseIcon}"/>
+             <TextBlock Text="{StaticResource CloseIcon}"/>
         </Border>
     </ControlTemplate>
 
     <ControlTemplate x:Key="AppbarMinimizeButton" x:Name="AppMinimize" TargetType="Button">
         <Border Style="{StaticResource AppbarButtonStyles}">
-            <TextBlock FontFamily="/Resources/Fonts/DoLoopV1.ttf#DoLoopV1" Text="{StaticResource Minus}"/>
+            <TextBlock Text="{StaticResource Minus}"/>
         </Border>
     </ControlTemplate>
 
     
     <!--Main-->
+    <!--Window Styles-->
+    <Style x:Key="WindowStyles" TargetType="Border">
+        <Setter Property="Background" Value="{StaticResource UIBackground}"/>
+        <Setter Property="CornerRadius" Value="10"/>
+    </Style>
+
+
+
     <Style x:Key="NormalTask_NoStyleStyles" TargetType="Label">
         <Setter Property="Foreground" Value="{StaticResource NormalTask}"/>
         <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
