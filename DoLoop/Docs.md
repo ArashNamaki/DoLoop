@@ -26,7 +26,7 @@
 | Task | Estimated sprint | Start / Finish Date | Status |
 | :- | :- | :-: | :-: | 
 | Set up MVVM base (models, viewmodels, folders) | 1 days | Jul 25 - 25 | x |
-| Data binding, basic UI layout  | 2 days | Jul 27 -  |  |
+| Data binding, basic UI layout  | 2 days | Jul 27 - 30 |  |
 | Add & delete tasks | 2 days |  |  |
 | Task types & icons | 2 days |  |  |
 

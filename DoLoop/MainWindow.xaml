@@ -9,7 +9,7 @@
         Height="700" Width="600" SizeToContent="WidthAndHeight"
         ResizeMode="CanResizeWithGrip" WindowStyle="None"
         AllowsTransparency="True" Background="Transparent"
-        Icon="{StaticResource AppLogo}" WindowStartupLocation="CenterOwner" MouseDown="DragWindow">
+        Icon="{StaticResource AppLogoBaBack}" WindowStartupLocation="CenterOwner" MouseDown="DragWindow">
     
     <Border Style="{StaticResource WindowStyles}">
         <Grid Name="AppWindow" Margin="0">
@@ -19,7 +19,7 @@
             </Grid.RowDefinitions>
 
             <!--Appbar-->
-            <Grid Grid.Row="0" Name="AppBar" Margin="0">
+            <Grid Grid.Row="0" Name="AppBar" Style="{StaticResource AppBarStyles}">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="auto"/>
                     <ColumnDefinition Width="*" />
@@ -27,7 +27,7 @@
                     <ColumnDefinition Width="auto" />
                 </Grid.ColumnDefinitions>
                 <WrapPanel Grid.Column="0" Margin="24,0" VerticalAlignment="Center">
-                    <Image Source="{StaticResource AppLogo}" Width="20"/>
+                    <Image Source="{StaticResource AppLogo}" Width="14"/>
                     <Label Style="{StaticResource AppTitle}" Content="DoLoop"/>
                 </WrapPanel>
                 <Grid Grid.Column="1"/>
@@ -49,7 +49,7 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Grid Grid.Column="0" Name="ActiveList_Icon">
-                        <Border Width="40" Height="40"/>
+                        <Button Template="{StaticResource BoardButton}" ContentStringFormat="{StaticResource Box}"/>
                     </Grid>
 
                     <Grid Grid.Column="1" Name="ActiveList_Title" Style="{StaticResource ActiveListTitleStyles}">
@@ -59,12 +59,17 @@
                         </Grid.ColumnDefinitions>
                         <Grid Grid.Column="0" Name="BoardTitle" Style="{StaticResource BoardTitleStyles}">
                             <WrapPanel>
-
+                                <Button Template="{StaticResource MenuButton}" Name="G" Content="{StaticResource Left}"/>
+                                <TextBlock Name="BoardTitleTxt" Style="{StaticResource BoardTitleTextStyles}" Text="BoardTitle"/>
+                                <Button Template="{StaticResource MenuButton}" Name="K" Content="{StaticResource Left}"/>
                             </WrapPanel>
                         </Grid>
                         <Grid Grid.Column="1" Name="Date" Style="{StaticResource DateStyles}">
                             <WrapPanel>
-
+                                <TextBlock Name="Date_Day" Style="{StaticResource DateTextStyles}" Text="Sun"/>
+                                <TextBlock Name="Date_Month" Style="{StaticResource DateTextStyles}" Text="jul 24"/>
+                                <TextBlock Name="Date_Year" Style="{StaticResource DateTextStyles}" Text="2025"/>
+                                <Button Template="{StaticResource MenuButton}" Name="R" Content="{StaticResource Left}"/>
                             </WrapPanel>
                         </Grid>
                     </Grid>
@@ -85,7 +90,12 @@
                             <RowDefinition Height="auto"/>
                         </Grid.RowDefinitions>
                         <Grid Grid.Row="0" Name="SideBar_Top">
-
+                            
+                            <StackPanel Style="{StaticResource SidebarStackpanel}">
+                                <Line/>
+                                <Button Template="{StaticResource BoardButton}" ContentStringFormat="J"/>
+                                <Button Template="{StaticResource BoardButton}" ContentStringFormat="J"/>
+                            </StackPanel>
                         </Grid>
                         <Grid Grid.Row="1" Name="SideBar_Middle">
 
@@ -105,7 +115,6 @@
 
                         </Grid>
                         <Grid Grid.Row="1" Name="InputBar">
-
                         </Grid>
                     </Grid>
                 </Grid>

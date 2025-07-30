@@ -40,6 +40,7 @@ public partial class MainWindow : Window
 
     private void DragWindow(object sender, MouseButtonEventArgs e)
     {
-        this.DragMove();
+        if (e.ButtonState.Equals(Mouse.LeftButton))
+            this.DragMove();
     }
 }
