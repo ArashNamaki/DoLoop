@@ -26,22 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 185,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Docs.md",
-              "DocumentMoniker": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\Docs.md",
-              "RelativeDocumentMoniker": "Docs.md",
-              "ToolTip": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\Docs.md",
-              "RelativeToolTip": "Docs.md",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAABwAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-07-27T14:56:23.417Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
@@ -51,6 +37,22 @@
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Docs.md",
+              "DocumentMoniker": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\Docs.md",
+              "RelativeDocumentMoniker": "Docs.md",
+              "ToolTip": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\Docs.md",
+              "RelativeToolTip": "Docs.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-07-31T17:14:59.132Z"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
@@ -58,7 +60,7 @@
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAMwBUAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAADwvzcAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-30T09:11:18.672Z",
               "EditorCaption": ""
@@ -72,7 +74,7 @@
               "ToolTip": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-27T18:13:17.523Z",
+              "WhenOpened": "2025-07-31T11:06:04.257Z",
               "EditorCaption": ""
             }
           ]
@@ -83,12 +85,12 @@
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "FloatingWindowState": {
-        "Id": "38895176-7b90-46e1-a92f-07de57be0b4e",
+        "Id": "847d03e0-683c-4e44-a0a3-13ac93d16f98",
         "Display": 1,
-        "X": 375,
-        "Y": 172,
-        "Width": 1000,
-        "Height": 674,
+        "X": -345,
+        "Y": 343,
+        "Width": 1587,
+        "Height": 795,
         "WindowState": 2
       },
       "DocumentGroups": [
@@ -105,7 +107,7 @@
               "ToolTip": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\Resources\\Styles\\Styles.xaml",
               "RelativeToolTip": "Resources\\Styles\\Styles.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-28T16:26:00.092Z",
+              "WhenOpened": "2025-08-01T09:11:34.512Z",
               "EditorCaption": ""
             }
           ]

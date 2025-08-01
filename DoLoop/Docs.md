@@ -12,12 +12,16 @@
 
 #### To Do (Tasks): <a name="ToDo">
 
-1. Define Styles
-1. theme 
-1. base layout of the app
-1. Config window screen (resizable but no full screen)
-1. control styles
-1. add controls to main
+1. Define Styles [x]
+1. theme [x] 
+1. base layout of the app [x]
+1. Config window screen (resizable but no full screen) [x]
+1. control styles [x]
+1. add controls to main [x]
+1. [ ] task styles(Normal/Impro...)
+1. [ ] Board Icon fix
+1. [ ] UI control fucntinos
+1. [ ] other tabs(list/settings) setup
 
 
 #### Scheduls <a name="scheduls">
@@ -26,7 +30,7 @@
 | Task | Estimated sprint | Start / Finish Date | Status |
 | :- | :- | :-: | :-: | 
 | Set up MVVM base (models, viewmodels, folders) | 1 days | Jul 25 - 25 | x |
-| Data binding, basic UI layout  | 2 days | Jul 27 - 30 |  |
+| Data binding, basic UI layout  | 2 days | Jul 27 - 31 | x |
 | Add & delete tasks | 2 days |  |  |
 | Task types & icons | 2 days |  |  |
 

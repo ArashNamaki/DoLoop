@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DoLoop"
         mc:Ignorable="d"
-        Title="DoLoop" MinHeight="450" MinWidth="450"
+        Title="DoLoop" MinHeight="470" MinWidth="450"
         Height="700" Width="600" SizeToContent="WidthAndHeight"
         ResizeMode="CanResizeWithGrip" WindowStyle="None"
         AllowsTransparency="True" Background="Transparent"
-        Icon="{StaticResource AppLogoBaBack}" WindowStartupLocation="CenterOwner" MouseDown="DragWindow">
-    
+        Icon="{StaticResource AppLogoBaBack}" WindowStartupLocation="CenterOwner">
+
     <Border Style="{StaticResource WindowStyles}">
         <Grid Name="AppWindow" Margin="0">
             <Grid.RowDefinitions>
@@ -19,20 +19,21 @@
             </Grid.RowDefinitions>
 
             <!--Appbar-->
-            <Grid Grid.Row="0" Name="AppBar" Style="{StaticResource AppBarStyles}">
+            <Grid Grid.Row="0" Name="AppBar" Style="{StaticResource AppBarStyles}" MouseLeftButtonDown="AppBar_MouseLeftButtonDown">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="auto"/>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="auto" />
-                    <ColumnDefinition Width="auto" />
                 </Grid.ColumnDefinitions>
-                <WrapPanel Grid.Column="0" Margin="24,0" VerticalAlignment="Center">
-                    <Image Source="{StaticResource AppLogo}" Width="14"/>
+                <WrapPanel Grid.Column="0">
+                    <Image Source="{StaticResource AppLogo}"/>
                     <Label Style="{StaticResource AppTitle}" Content="DoLoop"/>
                 </WrapPanel>
                 <Grid Grid.Column="1"/>
-                <Button Grid.Column="2" Name="MinimizeBtn" VerticalAlignment="Center" HorizontalAlignment="Center" Template="{StaticResource AppbarMinimizeButton}" Click="MinimizeBtn_Click"/>
-                <Button Grid.Column="3" Name="CloseBtn" Template="{StaticResource AppbarCloseButton}" IsCancel="True" Click="CloseBtn_Click"/>
+                <WrapPanel Grid.Column="2">
+                    <Button Grid.Column="2" Name="MinimizeBtn" Template="{StaticResource MiniButton}" Click="MinimizeBtn_Click" ContentStringFormat="{StaticResource Minus}"/>
+                    <Button Grid.Column="3" Name="CloseBtn" Template="{StaticResource MiniButton}" IsCancel="True" Click="CloseBtn_Click" ContentStringFormat="{StaticResource CloseIcon}"/>
+                </WrapPanel>
             </Grid>
 
             <!--Active Tab-->
@@ -48,20 +49,20 @@
                         <ColumnDefinition Width="auto"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Grid Grid.Column="0" Name="ActiveList_Icon">
-                        <Button Template="{StaticResource BoardButton}" ContentStringFormat="{StaticResource Box}"/>
+                    <Grid Grid.Column="0">
+                    <Button Name="BoardTitleIcon" Click="BoardTitleIcon_Click" Template="{StaticResource BoardButton}" ContentStringFormat="{StaticResource Box}"/>
                     </Grid>
 
-                    <Grid Grid.Column="1" Name="ActiveList_Title" Style="{StaticResource ActiveListTitleStyles}">
+                    <Grid Grid.Column="1" Name="ActiveList_Title" Style="{StaticResource ActiveListTitleStyles}" Margin="0,-1,0,1">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <Grid Grid.Column="0" Name="BoardTitle" Style="{StaticResource BoardTitleStyles}">
                             <WrapPanel>
-                                <Button Template="{StaticResource MenuButton}" Name="G" Content="{StaticResource Left}"/>
+                                <Button Template="{StaticResource MiniButton}" ContentStringFormat="{StaticResource Left}"/>
                                 <TextBlock Name="BoardTitleTxt" Style="{StaticResource BoardTitleTextStyles}" Text="BoardTitle"/>
-                                <Button Template="{StaticResource MenuButton}" Name="K" Content="{StaticResource Left}"/>
+                                <Button Template="{StaticResource MiniButton}" ContentStringFormat="{StaticResource Right}"/>
                             </WrapPanel>
                         </Grid>
                         <Grid Grid.Column="1" Name="Date" Style="{StaticResource DateStyles}">
@@ -69,7 +70,7 @@
                                 <TextBlock Name="Date_Day" Style="{StaticResource DateTextStyles}" Text="Sun"/>
                                 <TextBlock Name="Date_Month" Style="{StaticResource DateTextStyles}" Text="jul 24"/>
                                 <TextBlock Name="Date_Year" Style="{StaticResource DateTextStyles}" Text="2025"/>
-                                <Button Template="{StaticResource MenuButton}" Name="R" Content="{StaticResource Left}"/>
+                                <Button Template="{StaticResource MiniButton}" ContentStringFormat="{StaticResource Pin}"/>
                             </WrapPanel>
                         </Grid>
                     </Grid>
@@ -79,44 +80,87 @@
                 <Grid Grid.Row="1" Name="Main" Style="{StaticResource MainStyles}">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto"/>
-                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
                     <!--SideBar-->
-                    <Grid Grid.Column="0" Name="SideBar" Style="{StaticResource SideBarStyles}">
+                    <Grid Grid.Column="0" Name="SideBar" Visibility="Visible" Style="{StaticResource SidebarStyles}">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto"/>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="auto"/>
                         </Grid.RowDefinitions>
                         <Grid Grid.Row="0" Name="SideBar_Top">
-                            
                             <StackPanel Style="{StaticResource SidebarStackpanel}">
                                 <Line/>
-                                <Button Template="{StaticResource BoardButton}" ContentStringFormat="J"/>
-                                <Button Template="{StaticResource BoardButton}" ContentStringFormat="J"/>
+                                <Button Template="{StaticResource BoardButton}" ContentStringFormat="{StaticResource Plus}"/>
+                                <Button Template="{StaticResource SmallBoardButton}" ContentStringFormat="{StaticResource Terminal}"/>
+                                <Button Template="{StaticResource SmallBoardButton}" ContentStringFormat="{StaticResource Target}"/>
+                                <Button Template="{StaticResource SmallBoardButton}" ContentStringFormat="{StaticResource ShoppingCart}"/>
                             </StackPanel>
                         </Grid>
                         <Grid Grid.Row="1" Name="SideBar_Middle">
 
                         </Grid>
                         <Grid Grid.Row="2" Name="SideBar_Bottom">
-
+                            <StackPanel Style="{StaticResource SidebarStackpanel}">
+                                <Button Template="{StaticResource BoardButton}" ContentStringFormat="{StaticResource List}"/>
+                                <Button Template="{StaticResource BoardButton}" ContentStringFormat="{StaticResource Setting}"/>
+                            </StackPanel>
                         </Grid>
                     </Grid>
 
                     <!--MainPanel-->
-                    <Grid Grid.Column="1" Name="MainPanel" Style="{StaticResource MainPanelStyles}">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="auto"/>
-                        </Grid.RowDefinitions>
-                        <Grid Grid.Row="0" Name="TaskList">
+                    <Border Grid.Column="1" Name="MainPanel" Style="{StaticResource UpeerListLine}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
 
+                            <Grid Grid.Row="0" Name="TaskList">
+                            </Grid>
+                            <Grid Grid.Row="1" Name="InputBar" Margin="0,0,0,10">
+                                <Border Name="TaskInput" Style="{StaticResource TaskInputStyles}">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid Grid.Column="0">
+                                            <TextBox Name="AddTaskInput" MouseDoubleClick="AddTaskInput_MouseDoubleClick" ContextMenu="{x:Null}"/>
+                                        </Grid>
+                                        <Grid Grid.Column="1">
+                                            <Button Template="{StaticResource SmallBoardButton}" ContentStringFormat="{StaticResource Plus}"/>
+                                        </Grid>
+                                    </Grid>
+                                </Border>
+                            </Grid>
+                            <Grid Grid.Row="2" Margin="0,0,0,10">
+                                <WrapPanel Name="TaskTypeGroup" Visibility="Visible" Style="{DynamicResource TaskTypeStyles}">
+                                    <WrapPanel>
+                                        <RadioButton x:Name="NormalTask" GroupName="TaskType" Template="{StaticResource TaskRadio}" 
+                                                     BorderBrush="{DynamicResource NormalTask}" Background="{DynamicResource NormalTask}" IsChecked="True"/>
+                                        <Label Template="{StaticResource TaskRadioIcon}" Content="{DynamicResource Coffee}" Foreground="{DynamicResource NormalTask}"/>
+                                        <Label Template="{StaticResource TaskRadioText}" Content="Normal" Foreground="{DynamicResource NormalTask}"/>
+                                    </WrapPanel>
+                                    <WrapPanel>
+                                        <RadioButton x:Name="ImportantTask" GroupName="TaskType" Template="{StaticResource TaskRadio}" 
+                                                     Background="{DynamicResource ImportantTask}" BorderBrush="{DynamicResource ImportantTask}"/>
+                                        <Label Template="{StaticResource TaskRadioIcon}" Content="{DynamicResource AlertTriangle}" Foreground="{DynamicResource ImportantTask}"/>
+                                        <Label Template="{StaticResource TaskRadioText}" Content="Important" Foreground="{DynamicResource ImportantTask}"/>
+                                    </WrapPanel>
+                                    <WrapPanel>
+                                        <RadioButton x:Name="QuickTask" GroupName="TaskType" Template="{StaticResource TaskRadio}" 
+                                                      Background="{DynamicResource QuickTask}" BorderBrush="{DynamicResource QuickTask}"/>
+                                        <Label Template="{StaticResource TaskRadioIcon}" Content="{DynamicResource Zap}" Foreground="{DynamicResource QuickTask}"/>
+                                        <Label Template="{StaticResource TaskRadioText}" Content="Important" Foreground="{DynamicResource QuickTask}"/>
+                                    </WrapPanel>
+                                </WrapPanel>
+                            </Grid>
                         </Grid>
-                        <Grid Grid.Row="1" Name="InputBar">
-                        </Grid>
-                    </Grid>
+                    </Border>
                 </Grid>
                 
             </Grid>
