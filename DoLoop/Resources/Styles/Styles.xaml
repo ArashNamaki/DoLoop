@@ -131,14 +131,15 @@
     </Style>
 
     <Style x:Key="AppBarStyles" TargetType="Grid">
-        <Setter Property="Margin" Value="24,24,24,12"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="Background" Value="{DynamicResource Transparent}"/>
         <Style.Resources>
             <Style TargetType="Button">
                 <Setter Property="Margin" Value="8,0,0,0"/>
             </Style>
-
+            <Style TargetType="Grid">
+                <Setter Property="Margin" Value="24,24,24,12"/>
+            </Style>
             <Style TargetType="Image">
                 <Setter Property="Width" Value="24"/>
                 <Setter Property="Margin" Value="0,0,2,0"/>
@@ -217,9 +218,12 @@
     <!--TaskType Styles-->
     <Style x:Key="TaskTypeStyles" TargetType="WrapPanel">
         <Setter Property="Focusable" Value="False"/>
+        <Setter Property="Margin" Value="0,8"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
         <Style.Resources>
             <Style TargetType="WrapPanel">
                 <Setter Property="Margin" Value="0,0,12,0"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
             </Style>
         </Style.Resources>
     </Style>
@@ -249,7 +253,7 @@
     <!--Components-->
     <Style x:Key="UpeerListLine" TargetType="Border">
         <Setter Property="BorderBrush" Value="{DynamicResource UIElements}"/>
-        <Setter Property="BorderThickness" Value="0,1,0,0"/>
+        <Setter Property="BorderThickness" Value="0,1.2,0,0"/>
         <Setter Property="Margin" Value="0,5,0,0"/>
     </Style>
     
@@ -316,7 +320,6 @@
             <TextBlock x:Name="BoardButton_Icon" Text="{TemplateBinding Property=ContentStringFormat}"/>
         </Border>
         <ControlTemplate.Triggers>
-            <!-- Hover -->
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter TargetName="ButtonBorder_Board" Property="Background" Value="{DynamicResource UIElements}"/>
                 <Setter TargetName="BoardButton_Icon" Property="Foreground" Value="{DynamicResource UIBackground}"/>
@@ -324,7 +327,46 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-        <!--Sidebar Small Buttons-->
+    <Style x:Key="BoardIconStyle" TargetType="Border">
+        <Setter Property="Focusable" Value="False"/>
+        <Setter Property="Width" Value="40"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="CornerRadius" Value="16"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Background" Value="{DynamicResource UIElements}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource UIElements}"/>
+        <Setter Property="BorderThickness" Value="1.2"/>
+        <Style.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="Foreground" Value="{DynamicResource UIForeground}"/>
+                <Setter Property="FontFamily" Value="{StaticResource PrimaryIcon}"/>
+                <Setter Property="FontSize" Value="{StaticResource Body}"/>
+                <Setter Property="FontStyle" Value="{StaticResource Normal}"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style>
+        </Style.Resources>
+    </Style>
+    <ControlTemplate x:Key="BoardIconButton" TargetType="Button">
+        <Grid>
+            <Border Name="ShadowEffect" Background="{DynamicResource UIElements}" CornerRadius="16" Opacity="0.3">
+                <Border.Effect>
+                    <BlurEffect Radius="16" KernelType="Box"/>
+                </Border.Effect>
+            </Border>
+            <Border x:Name="ButtonBorder_Board" Style="{DynamicResource BoardIconStyle}">
+                <TextBlock x:Name="BoardButton_Icon" Text="{TemplateBinding Property=ContentStringFormat}"/>
+            </Border>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="ShadowEffect" Property="Opacity" Value="0.6"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <!--Sidebar Small Buttons-->
     <Style x:Key="SmallButtonStyle" TargetType="Border">
         <Setter Property="Focusable" Value="False"/>
         <Setter Property="Width" Value="32"/>
@@ -368,34 +410,32 @@
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="Background" Value="{DynamicResource Transparent}"/>
         <Setter Property="BorderBrush" Value="{DynamicResource UIElements}"/>
-        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderThickness" Value="1.2"/>
         <Style.Resources>
-            <Style TargetType="TextBox">
-                <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
-                <Setter Property="FontSize" Value="{StaticResource Body}"/>
-                <Setter Property="FontStyle" Value="{StaticResource Italic}"/>
-                <Setter Property="Foreground" Value="{DynamicResource UIElements}"/>
-                <Setter Property="Background" Value="{DynamicResource Transparent}"/>
-                <Setter Property="BorderBrush" Value="{DynamicResource Transparent}"/>
-                <Setter Property="BorderThickness" Value="0"/>
-                <Setter Property="Width" Value="auto"/>
-                <Setter Property="MaxHeight" Value="35"/>
-                <Setter Property="HorizontalContentAlignment" Value="Left"/>
-                <Setter Property="HorizontalAlignment" Value="Stretch"/>
-                <Setter Property="VerticalAlignment" Value="Center"/>
-                <Style.Resources>
-                    <Style TargetType="Paragraph">
-                        <Setter Property="Margin" Value="0"/>
-                    </Style>
-                </Style.Resources>
-            </Style>
             <Style TargetType="Grid">
                 <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="ClipToBounds" Value="True"/>
             </Style>
         </Style.Resources>
     </Style>
+    <Style x:Key="TaskInputTextStyles" TargetType="TextBox">
+        <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
+        <Setter Property="FontSize" Value="{StaticResource Body}"/>
+        <Setter Property="FontStyle" Value="{StaticResource Italic}"/>
+        <Setter Property="Foreground" Value="{DynamicResource UIElements}"/>
+        <Setter Property="Background" Value="{DynamicResource Transparent}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource UIElements}"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="TextWrapping" Value="NoWrap"/>
+        <Setter Property="AcceptsReturn" Value="False"/>
+        <Setter Property="ClipToBounds" Value="True"/>
+        <Setter Property="MaxHeight" Value="40"/>
+        <Setter Property="Width" Value="auto"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0,0,8,0"/>
+    </Style>
 
-        <!--RadioButton-->
+    <!--RadioButton-->
     <Style x:Key="TaskRadioStyles" TargetType="Border">
         <Setter Property="Focusable" Value="False"/>
         <Setter Property="Width" Value="14"/>
@@ -407,14 +447,19 @@
     </Style>
 
     <ControlTemplate x:Key="TaskRadio" TargetType="RadioButton">
-        <Border x:Name="Border" Style="{DynamicResource TaskRadioStyles}" 
-                BorderBrush="{TemplateBinding BorderBrush}" Background="{DynamicResource Transparent}"/>
-            <ControlTemplate.Triggers>
+        <Grid>
+            <Border x:Name="RadioShadowEffect" Background="{DynamicResource Transparent}" CornerRadius="16" Opacity="0.3">
+                <Border.Effect>
+                    <BlurEffect Radius="10.0" KernelType="Box"/>
+                </Border.Effect>
+            </Border>
+            <Border x:Name="Border" Style="{DynamicResource TaskRadioStyles}" 
+            BorderBrush="{TemplateBinding BorderBrush}" Background="{DynamicResource Transparent}"/>
+        </Grid>
+        <ControlTemplate.Triggers>
             <Trigger Property="IsChecked" Value="True">
                 <Setter TargetName="Border" Property="Background" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Background}"/>
-            </Trigger>
-            <Trigger Property="IsMouseOver" Value="True">
-                <Setter TargetName="Border" Property="BorderBrush" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Background}"/>
+                <Setter TargetName="RadioShadowEffect" Property="Background" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Background}"/>
             </Trigger>
             <Trigger Property="IsEnabled" Value="False">
                 <Setter TargetName="Border" Property="Opacity" Value="0.3"/>

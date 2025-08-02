@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 185,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -35,10 +35,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
             },
             {
               "$type": "Document",
@@ -62,8 +58,7 @@
               "RelativeToolTip": "MainWindow.xaml.cs",
               "ViewState": "AgIAACgAAAAAAAAAAADwvzcAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T09:11:18.672Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-30T09:11:18.672Z"
             },
             {
               "$type": "Document",
@@ -85,11 +80,11 @@
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "FloatingWindowState": {
-        "Id": "847d03e0-683c-4e44-a0a3-13ac93d16f98",
+        "Id": "68a5710f-d66d-46a0-9cd2-e201711eeb2c",
         "Display": 1,
-        "X": -345,
-        "Y": 343,
-        "Width": 1587,
+        "X": 268,
+        "Y": 142,
+        "Width": 1562,
         "Height": 795,
         "WindowState": 2
       },
@@ -107,7 +102,7 @@
               "ToolTip": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\Resources\\Styles\\Styles.xaml",
               "RelativeToolTip": "Resources\\Styles\\Styles.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-01T09:11:34.512Z",
+              "WhenOpened": "2025-08-02T19:34:07.34Z",
               "EditorCaption": ""
             }
           ]
