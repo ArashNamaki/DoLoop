@@ -19,7 +19,7 @@
 1. control styles [x]
 1. add controls to main [x]
 1. [ ] task styles(Normal/Impro...)
-1. [ ] Board Icon fix
+1. [x] Board Icon fix
 1. [ ] UI control fucntinos
 1. [ ] other tabs(list/settings) setup
 

@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DoLoop"
         mc:Ignorable="d"
-        Title="DoLoop"
         Height="700" Width="500" MinHeight="450" MinWidth="250"
-        ResizeMode="CanResizeWithGrip" WindowStyle="None"
+        Title="DoLoop" ResizeMode="CanResizeWithGrip" WindowStyle="None"
         AllowsTransparency="True" Background="Transparent"
-        Icon="{StaticResource AppLogoBaBack}" WindowStartupLocation="CenterOwner">
+        Icon="{StaticResource AppLogoBaBack}" WindowStartupLocation="CenterOwner" 
+        KeyDown="Window_KeyDown">
 
     <Border Style="{StaticResource WindowStyles}" Width="auto" Height="auto">
         <Grid Name="AppWindow">
@@ -54,8 +54,8 @@
                     </Grid>
 
                     <Grid Grid.Column="1" Name="ActiveList_Title" Style="{StaticResource ActiveListTitleStyles}">
-                        <WrapPanel>
-                            <Grid>
+                        <WrapPanel HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                            <Grid HorizontalAlignment="Stretch">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="*"/>
@@ -68,12 +68,12 @@
                                     </StackPanel>
                                 </Grid>
                                 <Grid Grid.Column="1" Name="Date" Style="{StaticResource DateStyles}">
-                                    <WrapPanel>
+                                    <StackPanel Orientation="Horizontal">
                                         <TextBlock Name="Date_Day" Style="{StaticResource DateTextStyles}" Text="Sun"/>
                                         <TextBlock Name="Date_Month" Style="{StaticResource DateTextStyles}" Text="jul 24"/>
                                         <TextBlock Name="Date_Year" Style="{StaticResource DateTextStyles}" Text="2025"/>
                                         <Button Template="{StaticResource MiniButton}" ContentStringFormat="{StaticResource Pin}"/>
-                                    </WrapPanel>
+                                    </StackPanel>
                                 </Grid>
                             </Grid>
                         </WrapPanel>
@@ -124,6 +124,10 @@
                             </Grid.RowDefinitions>
 
                             <Grid Grid.Row="0" Name="TaskList">
+                                <StackPanel x:Name="TaskItemList" Orientation="Vertical" ScrollViewer.VerticalScrollBarVisibility="Visible"
+                                            CanVerticallyScroll="True" SelectiveScrollingGrid.SelectiveScrollingOrientation="Vertical" ScrollViewer.CanContentScroll="True" ClipToBounds="True">
+                                 
+                                </StackPanel>
                             </Grid>
                             <!--Inputbar-->
                             <Border Grid.Row="1" Name="InputBar" Style="{DynamicResource TaskInputStyles}">
@@ -133,15 +137,17 @@
                                         <ColumnDefinition Width="auto"/>
                                     </Grid.ColumnDefinitions>
                                     <Grid Grid.Column="0">
-                                        <TextBox Name="AddTaskInput" Style="{DynamicResource TaskInputTextStyles}" MouseDoubleClick="AddTaskInput_MouseDoubleClick" ContextMenu="{x:Null}"/>
+                                        <TextBox Name="AddTaskInput" Template="{DynamicResource TaskInput}"
+                                                 KeyDown="AddTaskInput_KeyDown"/>
                                     </Grid>
                                     <Grid Grid.Column="1">
-                                        <Button Template="{StaticResource SmallBoardButton}" ContentStringFormat="{StaticResource Plus}"/>
+                                        <Button Name="AddTaskButton" Template="{StaticResource SmallBoardButton}" ContentStringFormat="{StaticResource Plus}"
+                                                MouseLeftButtonUp="AddTaskButton_MouseLeftButtonUp"/>
                                     </Grid>
                                 </Grid>
                             </Border>
                             <!--Task Types-->
-                            <Grid Grid.Row="2" Name="TaskTypeGroup" Visibility="Visible">
+                            <Grid Grid.Row="2" Name="TaskTypeGroup" Visibility="Collapsed">
                                 <WrapPanel Style="{DynamicResource TaskTypeStyles}">
                                     <WrapPanel>
                                         <RadioButton x:Name="NormalTask" GroupName="TaskType" Template="{StaticResource TaskRadio}" 

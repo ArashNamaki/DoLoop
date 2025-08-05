@@ -1,15 +1,14 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
                     xmlns:System="clr-namespace:System;assembly=netstandard">
-  
-
 
     <!--FontFaces-->
     <FontFamily x:Key="PrimaryFont">Segoe UI</FontFamily>
     <FontFamily x:Key="PrimaryIcon">/Resources/Fonts/DoLoopV1.ttf#DoLoopV1</FontFamily>
-        <System:Double x:Key="verySmall">10</System:Double>
-        <System:Double x:Key="Small">12</System:Double>
-        <System:Double x:Key="Body">14</System:Double>
+    <System:Double x:Key="TaskItemDelete">8</System:Double>
+    <System:Double x:Key="verySmall">10</System:Double>
+    <System:Double x:Key="Small">12</System:Double>
+    <System:Double x:Key="Body">14</System:Double>
     <System:Double x:Key="Tasks">16</System:Double>
     <System:Double x:Key="Titles">20</System:Double>
 
@@ -118,6 +117,7 @@
 
     <!--Appbar-->
     <Style x:Key="AppTitle" TargetType="Label">
+        <Setter Property="Focusable" Value="False"/>
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
@@ -131,6 +131,7 @@
     </Style>
 
     <Style x:Key="AppBarStyles" TargetType="Grid">
+        <Setter Property="Focusable" Value="False"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="Background" Value="{DynamicResource Transparent}"/>
         <Style.Resources>
@@ -161,6 +162,7 @@
 
     <!--ActiveTab Styles-->
     <Style x:Key="ActiveTabStyles" TargetType="Grid">
+        <Setter Property="Focusable" Value="False"/>
         <Setter Property="Margin" Value="24,12,24,24"/>
         <Style.Resources>
             <Style TargetType="Grid">
@@ -171,6 +173,7 @@
 
     <!--ActiveBar Styles-->
     <Style x:Key="ActiveBarStyles" TargetType="Grid">
+        <Setter Property="Focusable" Value="False"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Style.Resources>
             <Style TargetType="Grid">
@@ -181,11 +184,13 @@
 
     <!--ActiveListTitle Styles-->
     <Style x:Key="ActiveListTitleStyles" TargetType="Grid">
+        <Setter Property="Focusable" Value="False"/>
         <Setter Property="Margin" Value="0"/>
     </Style>
 
     <!--BoardTitle Styles-->
     <Style x:Key="BoardTitleStyles" TargetType="Grid">
+        <Setter Property="Focusable" Value="False"/>
         <Setter Property="Margin" Value="8,0"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
@@ -193,6 +198,7 @@
 
     <!--Date Styles-->
     <Style x:Key="DateStyles" TargetType="Grid">
+        <Setter Property="Focusable" Value="False"/>
         <Setter Property="Margin" Value="0"/>
         <Setter Property="HorizontalAlignment" Value="Right"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
@@ -200,12 +206,13 @@
 
     <!--Main Styles-->
     <Style x:Key="MainStyles" TargetType="Grid">
+        <Setter Property="Focusable" Value="False"/>
         <Setter Property="Margin" Value="0,12,0,0"/>
     </Style>
-
-    
+ 
     <!--SideBar Styles-->
     <Style x:Key="SidebarStyles" TargetType="Grid">
+        <Setter Property="Focusable" Value="False"/>
         <Setter Property="Margin" Value="0,0,16,0"/>
     </Style>
 
@@ -218,7 +225,7 @@
     <!--TaskType Styles-->
     <Style x:Key="TaskTypeStyles" TargetType="WrapPanel">
         <Setter Property="Focusable" Value="False"/>
-        <Setter Property="Margin" Value="0,8"/>
+        <Setter Property="Margin" Value="0,5"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Style.Resources>
             <Style TargetType="WrapPanel">
@@ -230,6 +237,7 @@
 
     <!--Sidebar Stackpanel-->
     <Style x:Key="SidebarStackpanel" TargetType="StackPanel">
+        <Setter Property="Focusable" Value="False"/>
         <Setter Property="Margin" Value="0,0,0,0"/>
         <Setter Property="Orientation" Value="Vertical"/>
         <Style.Resources>
@@ -280,7 +288,6 @@
             </Style>
         </Style.Resources>
     </Style>
-
     <ControlTemplate x:Key="MiniButton" TargetType="Button">
         <Border x:Name="MiniButton" Style="{DynamicResource MiniButtonStyles}">
             <TextBlock x:Name="MiniButton_Icon" Text="{TemplateBinding Property=ContentStringFormat}"/>
@@ -306,6 +313,7 @@
         <Setter Property="BorderThickness" Value="1.2"/>
         <Style.Resources>
             <Style TargetType="TextBlock">
+                <Setter Property="Focusable" Value="False"/>
                 <Setter Property="Foreground" Value="{DynamicResource UIElements}"/>
                 <Setter Property="FontFamily" Value="{StaticResource PrimaryIcon}"/>
                 <Setter Property="FontSize" Value="{StaticResource Body}"/>
@@ -393,7 +401,6 @@
             <TextBlock x:Name="SmallBoardButton_Icon" Text="{TemplateBinding Property=ContentStringFormat}"/>
         </Border>
         <ControlTemplate.Triggers>
-            <!-- Hover -->
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter TargetName="SmallButtonBorder_Board" Property="Background" Value="{DynamicResource UIElements}"/>
                 <Setter TargetName="SmallBoardButton_Icon" Property="Foreground" Value="{DynamicResource UIBackground}"/>
@@ -402,9 +409,8 @@
     </ControlTemplate>
 
 
-        <!--Input-->
+    <!--Input-->
     <Style x:Key="TaskInputStyles" TargetType="Border">
-        <Setter Property="Focusable" Value="False"/>
         <Setter Property="CornerRadius" Value="16"/>
         <Setter Property="Padding" Value="10"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
@@ -418,22 +424,53 @@
             </Style>
         </Style.Resources>
     </Style>
-    <Style x:Key="TaskInputTextStyles" TargetType="TextBox">
-        <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
-        <Setter Property="FontSize" Value="{StaticResource Body}"/>
-        <Setter Property="FontStyle" Value="{StaticResource Italic}"/>
-        <Setter Property="Foreground" Value="{DynamicResource UIElements}"/>
-        <Setter Property="Background" Value="{DynamicResource Transparent}"/>
-        <Setter Property="BorderBrush" Value="{DynamicResource UIElements}"/>
-        <Setter Property="BorderThickness" Value="0"/>
-        <Setter Property="TextWrapping" Value="NoWrap"/>
-        <Setter Property="AcceptsReturn" Value="False"/>
-        <Setter Property="ClipToBounds" Value="True"/>
-        <Setter Property="MaxHeight" Value="40"/>
-        <Setter Property="Width" Value="auto"/>
-        <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="Margin" Value="0,0,8,0"/>
+    <Style x:Key="TaskInputTextStyles" TargetType="Grid">
+        <Style.Resources>
+            <Style TargetType="TextBox">
+                <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
+                <Setter Property="FontSize" Value="{StaticResource Body}"/>
+                <Setter Property="FontStyle" Value="{StaticResource Italic}"/>
+                <Setter Property="Foreground" Value="{DynamicResource UIElements}"/>
+                <Setter Property="Background" Value="{DynamicResource Transparent}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource UIElements}"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="TextWrapping" Value="Wrap"/>
+                <Setter Property="AcceptsReturn" Value="False"/>
+                <Setter Property="ClipToBounds" Value="True"/>
+                <Setter Property="MaxHeight" Value="40"/>
+                <Setter Property="Width" Value="auto"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="0,0,8,0"/>
+            </Style>
+            <Style TargetType="TextBlock">
+                <Setter Property="Focusable" Value="False"/>
+                <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
+                <Setter Property="FontSize" Value="{StaticResource Small}"/>
+                <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
+                <Setter Property="FontStyle" Value="{StaticResource Italic}"/>
+                <Setter Property="Foreground" Value="{DynamicResource UIElements}"/>
+                <Setter Property="Background" Value="{DynamicResource Transparent}"/>
+                <Setter Property="Visibility" Value="Visible"/>
+            </Style>
+        </Style.Resources>
     </Style>
+    <ControlTemplate x:Key="TaskInput" TargetType="TextBox">
+        <Grid Style="{DynamicResource TaskInputTextStyles}">
+            <TextBox ContextMenu="{x:Null}"/>
+            <TextBlock Name="PlaceholderText" Text="Task input | press Enter to type..."/>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsEnabled" Value="True">
+                <Setter TargetName="PlaceholderText" Property="Visibility" Value="Hidden"/>
+            </Trigger>
+            <Trigger Property="IsKeyboardFocused" Value="True">
+                <Setter TargetName="PlaceholderText" Property="Visibility" Value="Hidden"/>
+            </Trigger>
+            <Trigger Property="IsFocused" Value="False">
+                <Setter TargetName="PlaceholderText" Property="Visibility" Value="Visible"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
 
     <!--RadioButton-->
     <Style x:Key="TaskRadioStyles" TargetType="Border">
@@ -445,7 +482,6 @@
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
-
     <ControlTemplate x:Key="TaskRadio" TargetType="RadioButton">
         <Grid>
             <Border x:Name="RadioShadowEffect" Background="{DynamicResource Transparent}" CornerRadius="16" Opacity="0.3">
@@ -467,7 +503,7 @@
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
-    
+
     <Style x:Key="TaskRadioTextStyles" TargetType="Label">
         <Setter Property="Focusable" Value="False"/>
         <Setter Property="Background" Value="{DynamicResource Transparent}"/>
@@ -479,7 +515,6 @@
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
-
     <ControlTemplate x:Key="TaskRadioText" TargetType="Label">
         <WrapPanel>
             <Label Style="{DynamicResource TaskRadioTextStyles}" Foreground="{TemplateBinding Foreground}"
@@ -493,16 +528,15 @@
         <Setter Property="FontFamily" Value="{DynamicResource PrimaryIcon}"/>
         <Setter Property="FontSize" Value="{StaticResource Small}"/>
         <Setter Property="FontStyle" Value="{DynamicResource Normal}"/>
-        <Setter Property="Margin" Value="4,0,2,0"/>
+        <Setter Property="Margin" Value="2,0,0,0"/>
         <Setter Property="Padding" Value="0"/>
-        <Setter Property="Width" Value="14"/>
-        <Setter Property="Height" Value="14"/>
+        <Setter Property="Width" Value="20"/>
+        <Setter Property="Height" Value="20"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
-
     <ControlTemplate x:Key="TaskRadioIcon" TargetType="Label">
         <WrapPanel>
             <Label Style="{DynamicResource TaskRadioIconStyles}" Foreground="{TemplateBinding Foreground}"
@@ -510,11 +544,9 @@
         </WrapPanel>
     </ControlTemplate>
 
-
-
-
     <!--Titles-->
     <Style x:Key="BoardTitleTextStyles" TargetType="TextBlock">
+        <Setter Property="Focusable" Value="False"/>
         <Setter Property="Foreground" Value="{DynamicResource UIElements}"/>
         <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
         <Setter Property="FontSize" Value="{StaticResource Titles}"/>
@@ -522,8 +554,10 @@
         <Setter Property="FontWeight" Value="{StaticResource Regular}"/>
         <Setter Property="Margin" Value="4,0"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
-    </Style>    
+    </Style>
+
     <Style x:Key="DateTextStyles" TargetType="TextBlock">
+        <Setter Property="Focusable" Value="False"/>
         <Setter Property="Foreground" Value="{DynamicResource UIElements}"/>
         <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
         <Setter Property="FontSize" Value="{StaticResource Body}"/>
@@ -532,27 +566,49 @@
         <Setter Property="Margin" Value="4,0"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
-
-    <Style x:Key="NormalTask_NoStyleStyles" TargetType="Label">
-        <Setter Property="Foreground" Value="{DynamicResource NormalTask}"/>
-        <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
-        <Setter Property="FontSize" Value="{StaticResource Body}"/>
-        <Setter Property="FontStyle" Value="{StaticResource Italic}"/>
-        <Setter Property="FontWeight" Value="{StaticResource Regular}"/>
+    
+    <!--Tasks-->
+    <Style x:Key="NormalTask_SimpleStyles" TargetType="Border">
+        <Setter Property="Focusable" Value="False"/>
+        <Setter Property="Background" Value="{DynamicResource Transparent}"/>
+        <Setter Property="Padding" Value="0,4"/>
+        <Setter Property="Margin" Value="0,2"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Style.Resources>
+            <Style TargetType="Label">
+                <Setter Property="Focusable" Value="False"/>
+                <Setter Property="Foreground" Value="{DynamicResource UIElements}"/>
+                <Setter Property="FontFamily" Value="{StaticResource PrimaryIcon}"/>
+                <Setter Property="FontSize" Value="{StaticResource Body}"/>
+                <Setter Property="FontStyle" Value="{StaticResource Normal}"/>
+                <Setter Property="FontWeight" Value="{StaticResource Regular}"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+            </Style>
+            <Style TargetType="TextBlock">
+                <Setter Property="Focusable" Value="False"/>
+                <Setter Property="Foreground" Value="{DynamicResource UIElements}"/>
+                <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
+                <Setter Property="FontSize" Value="{StaticResource Tasks}"/>
+                <Setter Property="FontStyle" Value="{StaticResource Italic}"/>
+                <Setter Property="FontWeight" Value="{StaticResource Regular}"/>
+                <Setter Property="TextWrapping" Value="Wrap"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="Focusable" Value="False"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="FontFamily" Value="{StaticResource PrimaryIcon}"/>
+                <Setter Property="FontSize" Value="{StaticResource TaskItemDelete}"/>
+                <Setter Property="Background" Value="{StaticResource Transparent}"/>
+                <Setter Property="Foreground" Value="{DynamicResource UIElements}"/>
+            </Style>
+        </Style.Resources>
     </Style>
-    <ControlTemplate x:Key="NormalTask_NoStyle" TargetType="Label">
-        <Border Padding="2,2">
-            <Grid VerticalAlignment="Top" HorizontalAlignment="Stretch">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="20"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="20"/>
-                </Grid.ColumnDefinitions>
-                <Image Grid.Column="0" Source="{StaticResource CoffeeDrawingImage}"/>
-                <Label Grid.Column="1" Style="{StaticResource NormalTask_NoStyleStyles}" Padding="8,0" Content="heeeeelp"/>
-                <Image Grid.Column="2" Source="{StaticResource XDrawingImage}" Stretch="UniformToFill" Width="8" Height="8"/>
-            </Grid>
-        </Border>
-    </ControlTemplate> 
-
+    
 </ResourceDictionary>

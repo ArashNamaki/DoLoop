@@ -21,6 +21,26 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
 
+        AddTaskInput.GotFocus += AddTaskInput_GotFocus;
+    }
+
+    public void AddTaskToList()
+    {
+        var taskItem = new TaskItem
+        {
+            Text = AddTaskInput.Text.ToString(),
+            Icon = "O",
+            Color = (Brush)FindResource("QuickTask")
+        };
+        TaskItemList.Children.Add(new TaskItemControl(taskItem));
+    }
+
+    private void AddTaskInput_GotFocus(object sender, RoutedEventArgs e)
+    {
+        if (TaskTypeGroup.Visibility == Visibility.Collapsed && AddTaskInput.Focus())
+            TaskTypeGroup.Visibility = Visibility.Visible;
+        else
+            TaskTypeGroup.Visibility = Visibility.Collapsed;
     }
 
     private void MinimizeBtn_Click(object sender, RoutedEventArgs e)
@@ -35,9 +55,14 @@ public partial class MainWindow : Window
 
     private void AddTaskInput_KeyDown(object sender, KeyEventArgs e)
     {
-
+        if ((e.Key == Key.Enter))
+            AddTaskToList();
+            
     }
-
+    private void AddTaskButton_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+    {
+        AddTaskToList();
+    }
     private void AppBar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
     {
         this.DragMove();
@@ -51,11 +76,10 @@ public partial class MainWindow : Window
             SideBar.Visibility = Visibility.Visible;
     }
 
-    private void AddTaskInput_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+    private void Window_KeyDown(object sender, KeyEventArgs e)
     {
-        if (TaskTypeGroup.Visibility == Visibility.Visible)
-            TaskTypeGroup.Visibility = Visibility.Collapsed;
-        else
-            TaskTypeGroup.Visibility = Visibility.Visible;
+
     }
+
+
 }

@@ -22,3 +22,5 @@ F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\ref\DoLoop.dll
 F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\App.baml
 F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\Resources\Styles\Icons.baml
 F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\Resources\Styles\Styles.baml
+F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\TaskItemControl.g.cs
+F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\TaskItemControl.baml
