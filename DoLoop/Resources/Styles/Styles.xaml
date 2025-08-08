@@ -424,54 +424,21 @@
             </Style>
         </Style.Resources>
     </Style>
-    <Style x:Key="TaskInputTextStyles" TargetType="Grid">
-        <Style.Resources>
-            <Style TargetType="TextBox">
-                <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
-                <Setter Property="FontSize" Value="{StaticResource Body}"/>
-                <Setter Property="FontStyle" Value="{StaticResource Italic}"/>
-                <Setter Property="Foreground" Value="{DynamicResource UIElements}"/>
-                <Setter Property="Background" Value="{DynamicResource Transparent}"/>
-                <Setter Property="BorderBrush" Value="{DynamicResource UIElements}"/>
-                <Setter Property="BorderThickness" Value="0"/>
-                <Setter Property="TextWrapping" Value="Wrap"/>
-                <Setter Property="AcceptsReturn" Value="False"/>
-                <Setter Property="ClipToBounds" Value="True"/>
-                <Setter Property="MaxHeight" Value="40"/>
-                <Setter Property="Width" Value="auto"/>
-                <Setter Property="VerticalAlignment" Value="Center"/>
-                <Setter Property="Margin" Value="0,0,8,0"/>
-            </Style>
-            <Style TargetType="TextBlock">
-                <Setter Property="Focusable" Value="False"/>
-                <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
-                <Setter Property="FontSize" Value="{StaticResource Small}"/>
-                <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
-                <Setter Property="FontStyle" Value="{StaticResource Italic}"/>
-                <Setter Property="Foreground" Value="{DynamicResource UIElements}"/>
-                <Setter Property="Background" Value="{DynamicResource Transparent}"/>
-                <Setter Property="Visibility" Value="Visible"/>
-            </Style>
-        </Style.Resources>
+    <Style x:Key="TaskInputTextStyles" TargetType="TextBox">
+        <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
+        <Setter Property="FontSize" Value="{StaticResource Body}"/>
+        <Setter Property="FontStyle" Value="{StaticResource Italic}"/>
+        <Setter Property="Foreground" Value="{DynamicResource UIElements}"/>
+        <Setter Property="Background" Value="{DynamicResource Transparent}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource UIElements}"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="ClipToBounds" Value="True"/>
+        <Setter Property="MaxHeight" Value="40"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0,0,8,0"/>
     </Style>
-    <ControlTemplate x:Key="TaskInput" TargetType="TextBox">
-        <Grid Style="{DynamicResource TaskInputTextStyles}">
-            <TextBox ContextMenu="{x:Null}"/>
-            <TextBlock Name="PlaceholderText" Text="Task input | press Enter to type..."/>
-        </Grid>
-        <ControlTemplate.Triggers>
-            <Trigger Property="IsEnabled" Value="True">
-                <Setter TargetName="PlaceholderText" Property="Visibility" Value="Hidden"/>
-            </Trigger>
-            <Trigger Property="IsKeyboardFocused" Value="True">
-                <Setter TargetName="PlaceholderText" Property="Visibility" Value="Hidden"/>
-            </Trigger>
-            <Trigger Property="IsFocused" Value="False">
-                <Setter TargetName="PlaceholderText" Property="Visibility" Value="Visible"/>
-            </Trigger>
-        </ControlTemplate.Triggers>
-    </ControlTemplate>
-
+    
     <!--RadioButton-->
     <Style x:Key="TaskRadioStyles" TargetType="Border">
         <Setter Property="Focusable" Value="False"/>
@@ -505,7 +472,7 @@
     </ControlTemplate>
 
     <Style x:Key="TaskRadioTextStyles" TargetType="Label">
-        <Setter Property="Focusable" Value="False"/>
+        <Setter Property="Visibility" Value="Visible"/>
         <Setter Property="Background" Value="{DynamicResource Transparent}"/>
         <Setter Property="FontFamily" Value="{DynamicResource PrimaryFont}"/>
         <Setter Property="FontSize" Value="{StaticResource Small}"/>
@@ -514,6 +481,12 @@
         <Setter Property="Padding" Value="0"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Grid}, Path=ActualWidth}" Value="376">
+                <Setter Property="Visibility" Value="Collapsed"/>
+            </DataTrigger>
+        </Style.Triggers>
     </Style>
     <ControlTemplate x:Key="TaskRadioText" TargetType="Label">
         <WrapPanel>
@@ -568,7 +541,7 @@
     </Style>
     
     <!--Tasks-->
-    <Style x:Key="NormalTask_SimpleStyles" TargetType="Border">
+    <Style x:Key="TaskItemSimpleStyles" TargetType="Border">
         <Setter Property="Focusable" Value="False"/>
         <Setter Property="Background" Value="{DynamicResource Transparent}"/>
         <Setter Property="Padding" Value="0,4"/>
@@ -584,7 +557,7 @@
                 <Setter Property="FontSize" Value="{StaticResource Body}"/>
                 <Setter Property="FontStyle" Value="{StaticResource Normal}"/>
                 <Setter Property="FontWeight" Value="{StaticResource Regular}"/>
-                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Top"/>
                 <Setter Property="HorizontalAlignment" Value="Center"/>
             </Style>
             <Style TargetType="TextBlock">
@@ -601,7 +574,7 @@
             <Style TargetType="Button">
                 <Setter Property="Focusable" Value="False"/>
                 <Setter Property="BorderThickness" Value="0"/>
-                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Top"/>
                 <Setter Property="HorizontalAlignment" Value="Center"/>
                 <Setter Property="FontFamily" Value="{StaticResource PrimaryIcon}"/>
                 <Setter Property="FontSize" Value="{StaticResource TaskItemDelete}"/>

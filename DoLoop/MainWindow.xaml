@@ -55,27 +55,17 @@
 
                     <Grid Grid.Column="1" Name="ActiveList_Title" Style="{StaticResource ActiveListTitleStyles}">
                         <WrapPanel HorizontalAlignment="Stretch" VerticalAlignment="Center">
-                            <Grid HorizontalAlignment="Stretch">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-                                <Grid Grid.Column="0" Name="BoardTitle" Style="{StaticResource BoardTitleStyles}">
-                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                        <Button Template="{StaticResource MiniButton}" ContentStringFormat="{StaticResource Left}"/>
-                                        <TextBlock Name="BoardTitleTxt" Style="{StaticResource BoardTitleTextStyles}" Text="BoardTitle"/>
-                                        <Button Template="{StaticResource MiniButton}" ContentStringFormat="{StaticResource Right}"/>
-                                    </StackPanel>
-                                </Grid>
-                                <Grid Grid.Column="1" Name="Date" Style="{StaticResource DateStyles}">
-                                    <StackPanel Orientation="Horizontal">
+                            <StackPanel Grid.Column="0" Name="BoardTitle" Orientation="Horizontal" VerticalAlignment="Center">
+                                    <Button Template="{StaticResource MiniButton}" ContentStringFormat="{StaticResource Left}"/>
+                                    <TextBlock Name="BoardTitleTxt" Style="{StaticResource BoardTitleTextStyles}" Text="BoardTitle"/>
+                                    <Button Template="{StaticResource MiniButton}" ContentStringFormat="{StaticResource Right}"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" Name="Date" Orientation="Horizontal">
                                         <TextBlock Name="Date_Day" Style="{StaticResource DateTextStyles}" Text="Sun"/>
                                         <TextBlock Name="Date_Month" Style="{StaticResource DateTextStyles}" Text="jul 24"/>
                                         <TextBlock Name="Date_Year" Style="{StaticResource DateTextStyles}" Text="2025"/>
                                         <Button Template="{StaticResource MiniButton}" ContentStringFormat="{StaticResource Pin}"/>
-                                    </StackPanel>
-                                </Grid>
-                            </Grid>
+                                </StackPanel>
                         </WrapPanel>
                     </Grid>
                 </Grid>
@@ -137,35 +127,37 @@
                                         <ColumnDefinition Width="auto"/>
                                     </Grid.ColumnDefinitions>
                                     <Grid Grid.Column="0">
-                                        <TextBox Name="AddTaskInput" Template="{DynamicResource TaskInput}"
-                                                 KeyDown="AddTaskInput_KeyDown"/>
+                                        <TextBox Name="AddTaskInput" Style="{DynamicResource TaskInputTextStyles}" KeyDown="AddTaskInput_KeyDown"/>
                                     </Grid>
                                     <Grid Grid.Column="1">
                                         <Button Name="AddTaskButton" Template="{StaticResource SmallBoardButton}" ContentStringFormat="{StaticResource Plus}"
-                                                MouseLeftButtonUp="AddTaskButton_MouseLeftButtonUp"/>
+                                                Click="AddTaskButton_Click"/>
                                     </Grid>
                                 </Grid>
                             </Border>
                             <!--Task Types-->
-                            <Grid Grid.Row="2" Name="TaskTypeGroup" Visibility="Collapsed">
+                            <Grid Grid.Row="2" Name="TaskTypeGroup" Visibility="Visible">
                                 <WrapPanel Style="{DynamicResource TaskTypeStyles}">
                                     <WrapPanel>
                                         <RadioButton x:Name="NormalTask" GroupName="TaskType" Template="{StaticResource TaskRadio}" 
                                                      BorderBrush="{DynamicResource NormalTask}" Background="{DynamicResource NormalTask}" IsChecked="True"/>
                                         <Label Template="{StaticResource TaskRadioIcon}" Content="{DynamicResource Coffee}" Foreground="{DynamicResource NormalTask}"/>
-                                        <Label Template="{StaticResource TaskRadioText}" Content="Normal" Foreground="{DynamicResource NormalTask}"/>
+                                        <Label Template="{StaticResource TaskRadioText}" VerticalAlignment="Center"
+                                               Content="Normal" Foreground="{DynamicResource NormalTask}"/>
                                     </WrapPanel>
                                     <WrapPanel>
                                         <RadioButton x:Name="ImportantTask" GroupName="TaskType" Template="{StaticResource TaskRadio}" 
                                                      Background="{DynamicResource ImportantTask}" BorderBrush="{DynamicResource ImportantTask}"/>
                                         <Label Template="{StaticResource TaskRadioIcon}" Content="{DynamicResource AlertTriangle}" Foreground="{DynamicResource ImportantTask}"/>
-                                        <Label Template="{StaticResource TaskRadioText}" Content="Important" Foreground="{DynamicResource ImportantTask}"/>
+                                        <Label Template="{StaticResource TaskRadioText}" VerticalAlignment="Center"
+                                               Content="Important" Foreground="{DynamicResource ImportantTask}"/>
                                     </WrapPanel>
                                     <WrapPanel>
                                         <RadioButton x:Name="QuickTask" GroupName="TaskType" Template="{StaticResource TaskRadio}" 
                                                       Background="{DynamicResource QuickTask}" BorderBrush="{DynamicResource QuickTask}"/>
                                         <Label Template="{StaticResource TaskRadioIcon}" Content="{DynamicResource Zap}" Foreground="{DynamicResource QuickTask}"/>
-                                        <Label Template="{StaticResource TaskRadioText}" Content="Important" Foreground="{DynamicResource QuickTask}"/>
+                                        <Label Template="{StaticResource TaskRadioText}" VerticalAlignment="Center"
+                                               Content="Quick" Foreground="{DynamicResource QuickTask}"/>
                                     </WrapPanel>
                                 </WrapPanel>
                             </Grid>

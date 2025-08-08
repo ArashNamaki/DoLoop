@@ -28,19 +28,17 @@ public partial class MainWindow : Window
     {
         var taskItem = new TaskItem
         {
-            Text = AddTaskInput.Text.ToString(),
+            Text = AddTaskInput.Text,
             Icon = "O",
             Color = (Brush)FindResource("QuickTask")
         };
         TaskItemList.Children.Add(new TaskItemControl(taskItem));
+        AddTaskInput.Clear();
     }
 
     private void AddTaskInput_GotFocus(object sender, RoutedEventArgs e)
     {
-        if (TaskTypeGroup.Visibility == Visibility.Collapsed && AddTaskInput.Focus())
-            TaskTypeGroup.Visibility = Visibility.Visible;
-        else
-            TaskTypeGroup.Visibility = Visibility.Collapsed;
+
     }
 
     private void MinimizeBtn_Click(object sender, RoutedEventArgs e)
@@ -59,7 +57,7 @@ public partial class MainWindow : Window
             AddTaskToList();
             
     }
-    private void AddTaskButton_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+    private void AddTaskButton_Click(object sender, RoutedEventArgs e)
     {
         AddTaskToList();
     }

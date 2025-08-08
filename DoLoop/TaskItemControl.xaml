@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DoLoop"
              mc:Ignorable="d">
-    <Border x:Name="TaskItem" Style="{DynamicResource NormalTask_SimpleStyles}" 
+    <Border x:Name="TaskItem" Style="{DynamicResource TaskItemSimpleStyles}" 
             MouseLeftButtonUp="TaskItem_MouseLeftButtonUp" MouseRightButtonUp="TaskItem_MouseRightButtonUp">
         <Grid>
             <Grid.ColumnDefinitions>
