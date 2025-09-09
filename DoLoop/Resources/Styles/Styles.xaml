@@ -49,7 +49,8 @@
     
     <!--Colors-->
     <Color x:Key="UIColor">#8AEA92</Color>
-    <Color x:Key="UIShadow">#808AEA92</Color>
+    <Color x:Key="UITransparentColor">#108AEA92</Color>
+    <Color x:Key="UITransparentSecondColor">#048AEA92</Color>
     <Color x:Key="UI_BackgroundColor">#031104</Color>
     <Color x:Key="UI_ForegroundColor">#031104</Color>
     <Color x:Key="NormalColor">#B9ED97</Color>
@@ -59,6 +60,7 @@
 
 
     <SolidColorBrush x:Key="UIForeground" Color="{DynamicResource UI_ForegroundColor}"/>
+    <SolidColorBrush x:Key="UIForegroundTransparent" Color="{DynamicResource UITransparentColor}"/>
     <SolidColorBrush x:Key="UIElements" Color="{DynamicResource UIColor}"/>
     <SolidColorBrush x:Key="UIBackground" Color="{DynamicResource UI_ForegroundColor}"/>
     <SolidColorBrush x:Key="Transparent" Color="{DynamicResource UI_Transparent}"/>
@@ -156,8 +158,6 @@
     <Style x:Key="WindowStyles" TargetType="Border">
         <Setter Property="Background" Value="{DynamicResource UIBackground}"/>
         <Setter Property="BorderBrush" Value="{DynamicResource UIElements}"/>
-        <Setter Property="BorderThickness" Value="0.5"/>
-        <Setter Property="CornerRadius" Value="10"/>
     </Style>
 
     <!--ActiveTab Styles-->
@@ -335,6 +335,40 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
+    <!--New Main Button Style-->
+    <Style x:Key="SecondButtonStyle" TargetType="Border">
+        <Setter Property="Focusable" Value="False"/>
+        <Setter Property="Width" Value="40"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="CornerRadius" Value="16"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Background" Value="{DynamicResource Transparent}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource UIForegroundTransparent}"/>
+        <Setter Property="BorderThickness" Value="1.5"/>
+        <Style.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="Focusable" Value="False"/>
+                <Setter Property="Foreground" Value="{DynamicResource UIElements}"/>
+                <Setter Property="FontFamily" Value="{StaticResource PrimaryIcon}"/>
+                <Setter Property="FontSize" Value="{StaticResource Body}"/>
+                <Setter Property="FontStyle" Value="{StaticResource Normal}"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style>
+        </Style.Resources>
+    </Style>
+    <ControlTemplate x:Key="SecondBoardButton" TargetType="Button">
+        <Border x:Name="ButtonBorder_Board" Style="{DynamicResource SecondButtonStyle}">
+            <TextBlock x:Name="BoardButton_Icon" Text="{TemplateBinding Property=ContentStringFormat}"/>
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="ButtonBorder_Board" Property="BorderBrush" Value="{DynamicResource UIElements}"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
     <Style x:Key="BoardIconStyle" TargetType="Border">
         <Setter Property="Focusable" Value="False"/>
         <Setter Property="Width" Value="40"/>
@@ -408,6 +442,39 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
+    <!--New Small Button Style-->
+    <Style x:Key="SecondSmallButtonStyle" TargetType="Border">
+        <Setter Property="Focusable" Value="False"/>
+        <Setter Property="Width" Value="32"/>
+        <Setter Property="Height" Value="32"/>
+        <Setter Property="CornerRadius" Value="12"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Background" Value="{DynamicResource Transparent}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource UIElements}"/>
+        <Setter Property="BorderThickness" Value="1.2"/>
+        <Style.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="Foreground" Value="{DynamicResource UIElements}"/>
+                <Setter Property="FontFamily" Value="{StaticResource PrimaryIcon}"/>
+                <Setter Property="FontSize" Value="{StaticResource Small}"/>
+                <Setter Property="FontStyle" Value="{StaticResource Normal}"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style>
+        </Style.Resources>
+    </Style>
+    <ControlTemplate x:Key="SecondSmallBoardButton" TargetType="Button">
+        <Border x:Name="SmallButtonBorder_Board" Style="{DynamicResource SecondSmallButtonStyle}">
+            <TextBlock x:Name="SmallBoardButton_Icon" Text="{TemplateBinding Property=ContentStringFormat}"/>
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="SmallButtonBorder_Board" Property="Background" Value="{DynamicResource UIElements}"/>
+                <Setter TargetName="SmallBoardButton_Icon" Property="Foreground" Value="{DynamicResource UIBackground}"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
 
     <!--Input-->
     <Style x:Key="TaskInputStyles" TargetType="Border">

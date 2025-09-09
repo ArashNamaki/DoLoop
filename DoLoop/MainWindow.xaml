@@ -87,7 +87,7 @@
                         <Grid Grid.Row="0" Name="SideBar_Top">
                             <StackPanel Style="{StaticResource SidebarStackpanel}">
                                 <Line/>
-                                <Button Template="{StaticResource BoardButton}" ContentStringFormat="{StaticResource Plus}"/>
+                                <Button Template="{StaticResource SecondBoardButton}" ContentStringFormat="{StaticResource Plus}"/>
                                 <Button Template="{StaticResource SmallBoardButton}" ContentStringFormat="{StaticResource Terminal}"/>
                                 <Button Template="{StaticResource SmallBoardButton}" ContentStringFormat="{StaticResource Target}"/>
                                 <Button Template="{StaticResource SmallBoardButton}" ContentStringFormat="{StaticResource ShoppingCart}"/>

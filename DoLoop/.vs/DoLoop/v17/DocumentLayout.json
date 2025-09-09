@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 185,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,8 +58,7 @@
               "RelativeToolTip": "Docs.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-07-31T17:14:59.132Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-31T17:14:59.132Z"
             },
             {
               "$type": "Document",
@@ -71,8 +70,7 @@
               "RelativeToolTip": "TaskItem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T12:26:13.796Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-05T12:26:13.796Z"
             },
             {
               "$type": "Document",
@@ -83,8 +81,7 @@
               "ToolTip": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\TaskItemControl.xaml",
               "RelativeToolTip": "TaskItemControl.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-05T11:10:05.467Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-05T11:10:05.467Z"
             },
             {
               "$type": "Document",
@@ -96,8 +93,7 @@
               "RelativeToolTip": "TaskItemControl.xaml.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAACgAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T10:56:29.851Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-05T10:56:29.851Z"
             },
             {
               "$type": "Document",
@@ -132,13 +128,13 @@
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "FloatingWindowState": {
-        "Id": "68a5710f-d66d-46a0-9cd2-e201711eeb2c",
-        "Display": 0,
-        "X": 319,
-        "Y": -29,
+        "Id": "d0105d50-9b73-4244-b9a9-bff1066ab5b2",
+        "Display": 1,
+        "X": 28,
+        "Y": 68,
         "Width": 1000,
         "Height": 674,
-        "WindowState": 0
+        "WindowState": 2
       },
       "DocumentGroups": [
         {
@@ -154,7 +150,7 @@
               "ToolTip": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\Resources\\Styles\\Styles.xaml",
               "RelativeToolTip": "Resources\\Styles\\Styles.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-02T19:34:07.34Z",
+              "WhenOpened": "2025-09-08T15:48:24.924Z",
               "EditorCaption": ""
             }
           ]
