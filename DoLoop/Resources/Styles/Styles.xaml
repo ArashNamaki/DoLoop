@@ -48,6 +48,7 @@
 
     
     <!--Colors-->
+    <Color x:Key="ErrorColor">#FF2222</Color>
     <Color x:Key="UIColor">#8AEA92</Color>
     <Color x:Key="UITransparentColor">#108AEA92</Color>
     <Color x:Key="UITransparentSecondColor">#048AEA92</Color>
@@ -59,8 +60,10 @@
     <Color x:Key="UI_Transparent">#00000000</Color>
 
 
+    <SolidColorBrush x:Key="UIError" Color="{DynamicResource ErrorColor}"/>
     <SolidColorBrush x:Key="UIForeground" Color="{DynamicResource UI_ForegroundColor}"/>
     <SolidColorBrush x:Key="UIForegroundTransparent" Color="{DynamicResource UITransparentColor}"/>
+    <SolidColorBrush x:Key="UIBackgroundTransparent" Color="{DynamicResource UITransparentSecondColor}"/>
     <SolidColorBrush x:Key="UIElements" Color="{DynamicResource UIColor}"/>
     <SolidColorBrush x:Key="UIBackground" Color="{DynamicResource UI_ForegroundColor}"/>
     <SolidColorBrush x:Key="Transparent" Color="{DynamicResource UI_Transparent}"/>
@@ -138,10 +141,10 @@
         <Setter Property="Background" Value="{DynamicResource Transparent}"/>
         <Style.Resources>
             <Style TargetType="Button">
-                <Setter Property="Margin" Value="8,0,0,0"/>
+                <Setter Property="Margin" Value="0,0,0,0"/>
             </Style>
             <Style TargetType="Grid">
-                <Setter Property="Margin" Value="24,24,24,12"/>
+                <Setter Property="Margin" Value="24,0,0,0"/>
             </Style>
             <Style TargetType="Image">
                 <Setter Property="Width" Value="24"/>
@@ -211,21 +214,23 @@
     </Style>
  
     <!--SideBar Styles-->
-    <Style x:Key="SidebarStyles" TargetType="Grid">
-        <Setter Property="Focusable" Value="False"/>
+    <Style x:Key="SidebarTopLine" TargetType="Border">
+        <Setter Property="BorderBrush" Value="{DynamicResource UIForegroundTransparent}"/>
+        <Setter Property="BorderThickness" Value="0,1,0,0"/>
         <Setter Property="Margin" Value="0,0,16,0"/>
     </Style>
 
     <!--MainPanel Styles-->
     <Style x:Key="MainPanelStyles" TargetType="Border">
         <Setter Property="BorderThickness" Value="0,1,0,0"/>
-        <Setter Property="BorderBrush" Value="{DynamicResource UIElements}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource UIForegroundTransparent}"/>
+        <Setter Property="Margin" Value="0,0,0,0"/>
     </Style>
 
     <!--TaskType Styles-->
     <Style x:Key="TaskTypeStyles" TargetType="WrapPanel">
         <Setter Property="Focusable" Value="False"/>
-        <Setter Property="Margin" Value="0,5"/>
+        <Setter Property="Margin" Value="0,10"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Style.Resources>
             <Style TargetType="WrapPanel">
@@ -236,41 +241,34 @@
     </Style>
 
     <!--Sidebar Stackpanel-->
-    <Style x:Key="SidebarStackpanel" TargetType="StackPanel">
-        <Setter Property="Focusable" Value="False"/>
+    <Style x:Key="SidebarStackpanelTop" TargetType="StackPanel">
+        <Setter Property="Margin" Value="0,0,0,0"/>
+        <Setter Property="Orientation" Value="Vertical"/>
+        <Style.Resources>
+            <Style TargetType="Button">
+                <Setter Property="Margin" Value="0,0,0,12"/>
+            </Style>
+        </Style.Resources>
+    </Style>
+    <Style x:Key="SidebarStackpanelBottom" TargetType="StackPanel">
         <Setter Property="Margin" Value="0,0,0,0"/>
         <Setter Property="Orientation" Value="Vertical"/>
         <Style.Resources>
             <Style TargetType="Button">
                 <Setter Property="Margin" Value="0,12,0,0"/>
             </Style>
-            <Style TargetType="Line">
-                <Setter Property="X1" Value="0"/>
-                <Setter Property="X2" Value="14"/>
-                <Setter Property="Margin" Value="0,0,0,6"/>
-                <Setter Property="StrokeThickness" Value="1"/>
-                <Setter Property="StrokeStartLineCap" Value="Round"/>
-                <Setter Property="StrokeEndLineCap" Value="Round"/>
-                <Setter Property="HorizontalAlignment" Value="Center"/>
-                <Setter Property="Stroke" Value="{DynamicResource UIElements}"/>
-            </Style>
         </Style.Resources>
     </Style>
 
 
     <!--Components-->
-    <Style x:Key="UpeerListLine" TargetType="Border">
-        <Setter Property="BorderBrush" Value="{DynamicResource UIElements}"/>
-        <Setter Property="BorderThickness" Value="0,1.2,0,0"/>
-        <Setter Property="Margin" Value="0,5,0,0"/>
-    </Style>
     
     <!--Buttons-->
     <Style x:Key="MiniButtonStyles" TargetType="Border">
         <Setter Property="Focusable" Value="False"/>
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="BorderBrush" Value="Transparent"/>
-        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="BorderThickness" Value="1.5"/>
         <Setter Property="CornerRadius" Value="12"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -294,8 +292,51 @@
         </Border>
         <ControlTemplate.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter TargetName="MiniButton" Property="Background" Value="{DynamicResource UIElements}"/>
-                <Setter TargetName="MiniButton_Icon" Property="Foreground" Value="{DynamicResource UIBackground}"/>
+                <Setter TargetName="MiniButton" Property="BorderBrush" Value="{DynamicResource UIElements}"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <Style x:Key="AppbarButtonStyles" TargetType="Border">
+        <Setter Property="Focusable" Value="False"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Width" Value="60"/>
+        <Setter Property="Height" Value="50"/>
+        <Style.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="Padding" Value="30,0"/>
+                <Setter Property="FontFamily" Value="{StaticResource PrimaryIcon}"/>
+                <Setter Property="Background" Value="{StaticResource Transparent}"/>
+                <Setter Property="Foreground" Value="{DynamicResource UIElements}"/>
+            </Style>
+        </Style.Resources>
+    </Style>
+    <ControlTemplate x:Key="CloseButton" TargetType="Button">
+        <Border x:Name="CloseButtonBorder" Style="{DynamicResource AppbarButtonStyles}">
+            <TextBlock x:Name="CloseButtonIcon" Text="{TemplateBinding Property=ContentStringFormat}"/>
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="CloseButtonBorder" Property="Background" Value="{DynamicResource UIBackgroundTransparent}"/>
+                <Setter TargetName="CloseButtonIcon" Property="Foreground" Value="{DynamicResource UIError}"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="MinimizeButton" TargetType="Button">
+        <Border x:Name="MinimizeButtonBorder" Style="{DynamicResource AppbarButtonStyles}">
+            <TextBlock x:Name="MinimizeButtonIcon" Text="{TemplateBinding Property=ContentStringFormat}"/>
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="MinimizeButtonBorder" Property="Background" Value="{DynamicResource UIBackgroundTransparent}"/>
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
@@ -451,8 +492,8 @@
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="Background" Value="{DynamicResource Transparent}"/>
-        <Setter Property="BorderBrush" Value="{DynamicResource UIElements}"/>
-        <Setter Property="BorderThickness" Value="1.2"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource UIForegroundTransparent}"/>
+        <Setter Property="BorderThickness" Value="1.5"/>
         <Style.Resources>
             <Style TargetType="TextBlock">
                 <Setter Property="Foreground" Value="{DynamicResource UIElements}"/>
@@ -470,8 +511,7 @@
         </Border>
         <ControlTemplate.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter TargetName="SmallButtonBorder_Board" Property="Background" Value="{DynamicResource UIElements}"/>
-                <Setter TargetName="SmallBoardButton_Icon" Property="Foreground" Value="{DynamicResource UIBackground}"/>
+                <Setter TargetName="SmallButtonBorder_Board" Property="BorderBrush" Value="{DynamicResource UIElements}"/>
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
@@ -481,15 +521,15 @@
         <Setter Property="CornerRadius" Value="16"/>
         <Setter Property="Padding" Value="10"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="Background" Value="{DynamicResource Transparent}"/>
-        <Setter Property="BorderBrush" Value="{DynamicResource UIElements}"/>
+        <Setter Property="Background" Value="{DynamicResource UIBackgroundTransparent}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource UIForegroundTransparent}"/>
         <Setter Property="BorderThickness" Value="1.2"/>
-        <Style.Resources>
-            <Style TargetType="Grid">
-                <Setter Property="VerticalAlignment" Value="Center"/>
-                <Setter Property="ClipToBounds" Value="True"/>
-            </Style>
-        </Style.Resources>
+        <Setter Property="Margin" Value="0,0,12,0"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="BorderBrush" Value="{DynamicResource UIElements}"/>
+            </Trigger>
+        </Style.Triggers>
     </Style>
     <Style x:Key="TaskInputTextStyles" TargetType="TextBox">
         <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>

@@ -25,13 +25,13 @@
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
-                    <WrapPanel Grid.Column="0">
+                    <WrapPanel Grid.Column="0" VerticalAlignment="Center">
                         <!--<Image Source="{StaticResource AppLogo}"/>-->
                         <Label Style="{StaticResource AppTitle}" Content="DoLoop"/>
                     </WrapPanel>
                     <WrapPanel Grid.Column="1" HorizontalAlignment="Right">
-                        <Button Name="MinimizeBtn" Template="{StaticResource MiniButton}" Click="MinimizeBtn_Click" ContentStringFormat="{StaticResource Minus}"/>
-                        <Button Name="CloseBtn" Template="{StaticResource MiniButton}" IsCancel="True" Click="CloseBtn_Click" ContentStringFormat="{StaticResource CloseIcon}"/>
+                        <Button Name="MinimizeBtn" Template="{StaticResource MinimizeButton}" Click="MinimizeBtn_Click" ContentStringFormat="{StaticResource Minus}"/>
+                        <Button Name="CloseBtn" Template="{StaticResource CloseButton}" IsCancel="True" Click="CloseBtn_Click" ContentStringFormat="{StaticResource CloseIcon}"/>
                     </WrapPanel>
                 </Grid>
             </Grid>
@@ -78,34 +78,34 @@
                     </Grid.ColumnDefinitions>
 
                     <!--SideBar-->
-                    <Grid Grid.Column="0" Name="SideBar" Visibility="Visible" Style="{StaticResource SidebarStyles}">
+                    <Border Grid.Column="0" Name="SideBar" Visibility="Visible" Style="{DynamicResource SidebarTopLine}">
+                        <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto"/>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="auto"/>
                         </Grid.RowDefinitions>
                         <Grid Grid.Row="0" Name="SideBar_Top">
-                            <StackPanel Style="{StaticResource SidebarStackpanel}">
-                                <Line/>
+                            <StackPanel Style="{StaticResource SidebarStackpanelTop}">
                                 <Button Template="{StaticResource SecondBoardButton}" ContentStringFormat="{StaticResource Plus}"/>
-                                <Button Template="{StaticResource SmallBoardButton}" ContentStringFormat="{StaticResource Terminal}"/>
-                                <Button Template="{StaticResource SmallBoardButton}" ContentStringFormat="{StaticResource Target}"/>
-                                <Button Template="{StaticResource SmallBoardButton}" ContentStringFormat="{StaticResource ShoppingCart}"/>
+                                <Button Template="{StaticResource SecondSmallBoardButton}" ContentStringFormat="{StaticResource Terminal}"/>
+                                <Button Template="{StaticResource SecondSmallBoardButton}" ContentStringFormat="{StaticResource Target}"/>
+                                <Button Template="{StaticResource SecondSmallBoardButton}" ContentStringFormat="{StaticResource ShoppingCart}"/>
                             </StackPanel>
                         </Grid>
                         <Grid Grid.Row="1" Name="SideBar_Middle">
 
                         </Grid>
                         <Grid Grid.Row="2" Name="SideBar_Bottom">
-                            <StackPanel Style="{StaticResource SidebarStackpanel}">
-                                <Button Template="{StaticResource BoardButton}" ContentStringFormat="{StaticResource List}"/>
-                                <Button Template="{StaticResource BoardButton}" ContentStringFormat="{StaticResource Setting}"/>
+                            <StackPanel Style="{StaticResource SidebarStackpanelBottom}">
+                                <Button Template="{StaticResource SecondBoardButton}" ContentStringFormat="{StaticResource List}"/>
+                                <Button Template="{StaticResource SecondBoardButton}" ContentStringFormat="{StaticResource Setting}"/>
                             </StackPanel>
                         </Grid>
                     </Grid>
-
+                    </Border>
                     <!--MainPanel-->
-                    <Border Grid.Column="1" Name="MainPanel" Style="{StaticResource UpeerListLine}">
+                    <Border Grid.Column="1" Name="MainPanel" Style="{DynamicResource MainPanelStyles}">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*"/>
@@ -120,21 +120,21 @@
                                 </StackPanel>
                             </Grid>
                             <!--Inputbar-->
-                            <Border Grid.Row="1" Name="InputBar" Style="{DynamicResource TaskInputStyles}">
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="auto"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Grid Grid.Column="0">
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Column="0">
+                                    <Border Style="{DynamicResource TaskInputStyles}">
                                         <TextBox Name="AddTaskInput" Style="{DynamicResource TaskInputTextStyles}" KeyDown="AddTaskInput_KeyDown"/>
-                                    </Grid>
-                                    <Grid Grid.Column="1">
-                                        <Button Name="AddTaskButton" Template="{StaticResource SmallBoardButton}" ContentStringFormat="{StaticResource Plus}"
-                                                Click="AddTaskButton_Click"/>
-                                    </Grid>
+                                    </Border>
                                 </Grid>
-                            </Border>
+                                <Grid Grid.Column="1">
+                                    <Button Name="AddTaskButton" Template="{StaticResource SecondBoardButton}" ContentStringFormat="{StaticResource Plus}"
+                                            Click="AddTaskButton_Click"/>
+                                </Grid>
+                            </Grid>
                             <!--Task Types-->
                             <Grid Grid.Row="2" Name="TaskTypeGroup" Visibility="Visible">
                                 <WrapPanel Style="{DynamicResource TaskTypeStyles}">

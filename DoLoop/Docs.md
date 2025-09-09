@@ -2,13 +2,13 @@
 
 
 ## <h2 id="contx"> Table of contents </h2>
-1. [Introductions and installation](#intro)
+1. [Introductions](#intro)
 2. [Scheduls](#scheduls)
 
 ---
 ###### Project Initiation Date : Jul 24 | 2 Mordad
 
-#### Introduction and Installation <a name="intro">
+#### Introduction <a name="intro">
 
 #### To Do (Tasks): <a name="ToDo">
 
@@ -108,7 +108,6 @@
 >        justify:center;
 >        border-radius: 100px;
 >        color:#101010;
->        box-shadow: 0px 0px 20px 0px #00ff50;
 >    }
 ></style>
 ><a id="goToTop" href="#contx">▲</a> 
