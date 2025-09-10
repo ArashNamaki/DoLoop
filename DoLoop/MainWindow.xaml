@@ -11,78 +11,78 @@
         Icon="{StaticResource AppLogoBaBack}" WindowStartupLocation="CenterOwner" 
         KeyDown="Window_KeyDown">
 
-    <Border Style="{StaticResource WindowStyles}" Width="auto" Height="auto">
-        <Grid Name="AppWindow">
+    <Grid Name="AppWindow" Style="{StaticResource WindowStyles}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!--Appbar-->
+        <Grid Grid.Row="0" Name="AppBar" Style="{StaticResource AppBarStyles}" MouseLeftButtonDown="AppBar_MouseLeftButtonDown">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Label Style="{StaticResource AppTitle}" Content="DoLoop"/>
+                </Grid>
+                <Grid Grid.Column="1" HorizontalAlignment="Right">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Name="MinimizeBtn" Template="{StaticResource MinimizeButton}" Click="MinimizeBtn_Click" ContentStringFormat="{StaticResource Minus}"/>
+                    <Button Grid.Column="1" Name="CloseBtn" Template="{StaticResource CloseButton}" IsCancel="True" Click="CloseBtn_Click" ContentStringFormat="{StaticResource CloseIcon}"/>
+                </Grid>
+            </Grid>
+        </Grid>
+        <!--Active Tab-->
+        <Grid Grid.Row="1" Name="ActiveTab" Style="{StaticResource ActiveTabStyles}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <!--Appbar-->
-            <Grid Grid.Row="0" Name="AppBar" Style="{StaticResource AppBarStyles}" MouseLeftButtonDown="AppBar_MouseLeftButtonDown">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-                    <WrapPanel Grid.Column="0" VerticalAlignment="Center">
-                        <!--<Image Source="{StaticResource AppLogo}"/>-->
-                        <Label Style="{StaticResource AppTitle}" Content="DoLoop"/>
-                    </WrapPanel>
-                    <WrapPanel Grid.Column="1" HorizontalAlignment="Right">
-                        <Button Name="MinimizeBtn" Template="{StaticResource MinimizeButton}" Click="MinimizeBtn_Click" ContentStringFormat="{StaticResource Minus}"/>
-                        <Button Name="CloseBtn" Template="{StaticResource CloseButton}" IsCancel="True" Click="CloseBtn_Click" ContentStringFormat="{StaticResource CloseIcon}"/>
+            <!--ActiveBar-->
+            <Grid Grid.Row="0" Name="ActiveBar" Style="{StaticResource ActiveBarStyles}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Button Name="BoardTitleIcon" Click="BoardTitleIcon_Click" Template="{DynamicResource BoardIconButton}" ContentStringFormat="{StaticResource Box}"/>
+                </Grid>
+
+                <Grid Grid.Column="1" Name="ActiveList_Title" Style="{StaticResource ActiveListTitleStyles}">
+                    <WrapPanel HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                        <StackPanel Grid.Column="0" Name="BoardTitle" Orientation="Horizontal" VerticalAlignment="Center">
+                            <Button Template="{StaticResource MiniButton}" ContentStringFormat="{StaticResource Left}"/>
+                            <TextBlock Name="BoardTitleTxt" Style="{StaticResource BoardTitleTextStyles}" Text="BoardTitle"/>
+                            <Button Template="{StaticResource MiniButton}" ContentStringFormat="{StaticResource Right}"/>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" Name="Date" Orientation="Horizontal">
+                            <TextBlock Name="Date_Day" Style="{StaticResource DateTextStyles}" Text="Sun"/>
+                            <TextBlock Name="Date_Month" Style="{StaticResource DateTextStyles}" Text="jul 24"/>
+                            <TextBlock Name="Date_Year" Style="{StaticResource DateTextStyles}" Text="2025"/>
+                            <Button Template="{StaticResource MiniButton}" ContentStringFormat="{StaticResource Pin}"/>
+                        </StackPanel>
                     </WrapPanel>
                 </Grid>
             </Grid>
 
-            <!--Active Tab-->
-            <Grid Grid.Row="1" Name="ActiveTab" Style="{StaticResource ActiveTabStyles}">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
+            <!--Main-->
+            <Grid Grid.Row="1" Name="Main" Style="{StaticResource MainStyles}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-                <!--ActiveBar-->
-                <Grid Grid.Row="0" Name="ActiveBar" Style="{StaticResource ActiveBarStyles}">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid Grid.Column="0">
-                    <Button Name="BoardTitleIcon" Click="BoardTitleIcon_Click" Template="{StaticResource BoardIconButton}" ContentStringFormat="{StaticResource Box}"/>
-                    </Grid>
-
-                    <Grid Grid.Column="1" Name="ActiveList_Title" Style="{StaticResource ActiveListTitleStyles}">
-                        <WrapPanel HorizontalAlignment="Stretch" VerticalAlignment="Center">
-                            <StackPanel Grid.Column="0" Name="BoardTitle" Orientation="Horizontal" VerticalAlignment="Center">
-                                    <Button Template="{StaticResource MiniButton}" ContentStringFormat="{StaticResource Left}"/>
-                                    <TextBlock Name="BoardTitleTxt" Style="{StaticResource BoardTitleTextStyles}" Text="BoardTitle"/>
-                                    <Button Template="{StaticResource MiniButton}" ContentStringFormat="{StaticResource Right}"/>
-                                </StackPanel>
-                                <StackPanel Grid.Column="1" Name="Date" Orientation="Horizontal">
-                                        <TextBlock Name="Date_Day" Style="{StaticResource DateTextStyles}" Text="Sun"/>
-                                        <TextBlock Name="Date_Month" Style="{StaticResource DateTextStyles}" Text="jul 24"/>
-                                        <TextBlock Name="Date_Year" Style="{StaticResource DateTextStyles}" Text="2025"/>
-                                        <Button Template="{StaticResource MiniButton}" ContentStringFormat="{StaticResource Pin}"/>
-                                </StackPanel>
-                        </WrapPanel>
-                    </Grid>
-                </Grid>
-
-                <!--Main-->
-                <Grid Grid.Row="1" Name="Main" Style="{StaticResource MainStyles}">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-
-                    <!--SideBar-->
-                    <Border Grid.Column="0" Name="SideBar" Visibility="Visible" Style="{DynamicResource SidebarTopLine}">
-                        <Grid>
+                <!--SideBar-->
+                <Border Grid.Column="0" Name="SideBar" Visibility="Visible" Style="{DynamicResource SidebarTopLine}">
+                    <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="auto"/>
                             <RowDefinition Height="*"/>
+                            <RowDefinition Height="0"/>
                             <RowDefinition Height="auto"/>
                         </Grid.RowDefinitions>
                         <Grid Grid.Row="0" Name="SideBar_Top">
@@ -103,24 +103,30 @@
                             </StackPanel>
                         </Grid>
                     </Grid>
-                    </Border>
-                    <!--MainPanel-->
-                    <Border Grid.Column="1" Name="MainPanel" Style="{DynamicResource MainPanelStyles}">
-                        <Grid>
+                </Border>
+                <!--MainPanel-->
+                <Border Grid.Column="1" Style="{DynamicResource MainPanelStyles}">
+                    <Grid Name="MainPanel">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <!--Task List-->
+                        <Grid Grid.Row="0" Name="TaskList">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel x:Name="TaskItemList" Orientation="Vertical" ScrollViewer.VerticalScrollBarVisibility="Visible"
+                                        CanVerticallyScroll="True" SelectiveScrollingGrid.SelectiveScrollingOrientation="Vertical" ScrollViewer.CanContentScroll="True" ClipToBounds="True" Grid.RowSpan="2">
+                            </StackPanel>
+                        </Grid>
+                        <!--Inputbar-->
+                        <Grid Grid.Row="1">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*"/>
                                 <RowDefinition Height="auto"/>
-                                <RowDefinition Height="auto"/>
                             </Grid.RowDefinitions>
-
-                            <Grid Grid.Row="0" Name="TaskList">
-                                <StackPanel x:Name="TaskItemList" Orientation="Vertical" ScrollViewer.VerticalScrollBarVisibility="Visible"
-                                            CanVerticallyScroll="True" SelectiveScrollingGrid.SelectiveScrollingOrientation="Vertical" ScrollViewer.CanContentScroll="True" ClipToBounds="True">
-                                 
-                                </StackPanel>
-                            </Grid>
-                            <!--Inputbar-->
-                            <Grid Grid.Row="1">
+                            <Grid Grid.Row="0" Name="InputType" Margin="0,6">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="auto"/>
@@ -136,7 +142,7 @@
                                 </Grid>
                             </Grid>
                             <!--Task Types-->
-                            <Grid Grid.Row="2" Name="TaskTypeGroup" Visibility="Visible">
+                            <Grid Grid.Row="1" Name="TaskTypeGroup" Visibility="Visible">
                                 <WrapPanel Style="{DynamicResource TaskTypeStyles}">
                                     <WrapPanel>
                                         <RadioButton x:Name="NormalTask" GroupName="TaskType" Template="{StaticResource TaskRadio}" 
@@ -154,7 +160,7 @@
                                     </WrapPanel>
                                     <WrapPanel>
                                         <RadioButton x:Name="QuickTask" GroupName="TaskType" Template="{StaticResource TaskRadio}" 
-                                                      Background="{DynamicResource QuickTask}" BorderBrush="{DynamicResource QuickTask}"/>
+                                                     Background="{DynamicResource QuickTask}" BorderBrush="{DynamicResource QuickTask}"/>
                                         <Label Template="{StaticResource TaskRadioIcon}" Content="{DynamicResource Zap}" Foreground="{DynamicResource QuickTask}"/>
                                         <Label Template="{StaticResource TaskRadioText}" VerticalAlignment="Center"
                                                Content="Quick" Foreground="{DynamicResource QuickTask}"/>
@@ -162,10 +168,9 @@
                                 </WrapPanel>
                             </Grid>
                         </Grid>
-                    </Border>
-                </Grid>
-                
+                    </Grid>
+                </Border>
             </Grid>
         </Grid>
-    </Border>
+    </Grid>
 </Window>

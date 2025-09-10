@@ -48,7 +48,7 @@
 
     
     <!--Colors-->
-    <Color x:Key="ErrorColor">#FF2222</Color>
+    <Color x:Key="ErrorColor">#FF1133</Color>
     <Color x:Key="UIColor">#8AEA92</Color>
     <Color x:Key="UITransparentColor">#108AEA92</Color>
     <Color x:Key="UITransparentSecondColor">#048AEA92</Color>
@@ -124,9 +124,8 @@
     <Style x:Key="AppTitle" TargetType="Label">
         <Setter Property="Focusable" Value="False"/>
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
-        <Setter Property="Margin" Value="2,0"/>
         <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
         <Setter Property="FontStyle" Value="{StaticResource Italic}"/>
         <Setter Property="FontWeight" Value="{StaticResource Thin}"/>
@@ -140,16 +139,8 @@
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="Background" Value="{DynamicResource Transparent}"/>
         <Style.Resources>
-            <Style TargetType="Button">
-                <Setter Property="Margin" Value="0,0,0,0"/>
-            </Style>
             <Style TargetType="Grid">
-                <Setter Property="Margin" Value="24,0,0,0"/>
-            </Style>
-            <Style TargetType="Image">
-                <Setter Property="Width" Value="24"/>
-                <Setter Property="Margin" Value="0,0,2,0"/>
-                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="12,0,0,0"/>
             </Style>
         </Style.Resources>
     </Style>
@@ -158,9 +149,8 @@
     <!--Layouts-->
     
     <!--Window Styles-->
-    <Style x:Key="WindowStyles" TargetType="Border">
+    <Style x:Key="WindowStyles" TargetType="Grid">
         <Setter Property="Background" Value="{DynamicResource UIBackground}"/>
-        <Setter Property="BorderBrush" Value="{DynamicResource UIElements}"/>
     </Style>
 
     <!--ActiveTab Styles-->
@@ -433,7 +423,7 @@
     </Style>
     <ControlTemplate x:Key="BoardIconButton" TargetType="Button">
         <Grid>
-            <Border Name="ShadowEffect" Background="{DynamicResource UIElements}" CornerRadius="16" Opacity="0.3">
+            <Border Name="ShadowEffect" Background="{DynamicResource UIElements}" CornerRadius="16" Opacity="0.2">
                 <Border.Effect>
                     <BlurEffect Radius="16" KernelType="Box"/>
                 </Border.Effect>
@@ -444,7 +434,7 @@
         </Grid>
         <ControlTemplate.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                    <Setter TargetName="ShadowEffect" Property="Opacity" Value="0.6"/>
+                    <Setter TargetName="ShadowEffect" Property="Opacity" Value="0.4"/>
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
@@ -519,11 +509,11 @@
     <!--Input-->
     <Style x:Key="TaskInputStyles" TargetType="Border">
         <Setter Property="CornerRadius" Value="16"/>
-        <Setter Property="Padding" Value="10"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Height" Value="40"/>
         <Setter Property="Background" Value="{DynamicResource UIBackgroundTransparent}"/>
         <Setter Property="BorderBrush" Value="{DynamicResource UIForegroundTransparent}"/>
-        <Setter Property="BorderThickness" Value="1.2"/>
+        <Setter Property="BorderThickness" Value="1.5"/>
         <Setter Property="Margin" Value="0,0,12,0"/>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
@@ -542,8 +532,9 @@
         <Setter Property="TextWrapping" Value="Wrap"/>
         <Setter Property="ClipToBounds" Value="True"/>
         <Setter Property="MaxHeight" Value="40"/>
-        <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="Margin" Value="0,0,8,0"/>
+        <Setter Property="VerticalAlignment" Value="Stretch"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="10,0"/>
     </Style>
     
     <!--RadioButton-->
@@ -558,9 +549,9 @@
     </Style>
     <ControlTemplate x:Key="TaskRadio" TargetType="RadioButton">
         <Grid>
-            <Border x:Name="RadioShadowEffect" Background="{DynamicResource Transparent}" CornerRadius="16" Opacity="0.3">
+            <Border x:Name="RadioShadowEffect" Background="{DynamicResource Transparent}" CornerRadius="16" Opacity="0.2">
                 <Border.Effect>
-                    <BlurEffect Radius="10.0" KernelType="Box"/>
+                    <BlurEffect Radius="15" KernelType="Gaussian"/>
                 </Border.Effect>
             </Border>
             <Border x:Name="Border" Style="{DynamicResource TaskRadioStyles}" 
