@@ -126,17 +126,18 @@
                                 <RowDefinition Height="*"/>
                                 <RowDefinition Height="auto"/>
                             </Grid.RowDefinitions>
-                            <Grid Grid.Row="0" Name="InputType" Margin="0,6">
+                            <!--Input field-->
+                            <Grid Grid.Row="0" Name="InputType" Margin="0,6" VerticalAlignment="Center">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="auto"/>
                                 </Grid.ColumnDefinitions>
                                 <Grid Grid.Column="0">
                                     <Border Style="{DynamicResource TaskInputStyles}">
-                                        <TextBox Name="AddTaskInput" Style="{DynamicResource TaskInputTextStyles}" KeyDown="AddTaskInput_KeyDown"/>
+                                        <TextBox Name="AddTaskInput" KeyDown="AddTaskInput_KeyDown"/>
                                     </Border>
                                 </Grid>
-                                <Grid Grid.Column="1">
+                                <Grid Grid.Column="1" VerticalAlignment="Center">
                                     <Button Name="AddTaskButton" Template="{StaticResource SecondBoardButton}" ContentStringFormat="{StaticResource Plus}"
                                             Click="AddTaskButton_Click"/>
                                 </Grid>
