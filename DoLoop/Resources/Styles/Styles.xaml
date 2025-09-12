@@ -48,7 +48,7 @@
 
     
     <!--Colors-->
-    <Color x:Key="ErrorColor">#FF1133</Color>
+    <Color x:Key="ErrorColor">#FF1B1C</Color>
     <Color x:Key="UIColor">#8AEA92</Color>
     <Color x:Key="UITransparentColor">#108AEA92</Color>
     <Color x:Key="UITransparentSecondColor">#048AEA92</Color>
@@ -207,7 +207,7 @@
     <Style x:Key="SidebarTopLine" TargetType="Border">
         <Setter Property="BorderBrush" Value="{DynamicResource UIForegroundTransparent}"/>
         <Setter Property="BorderThickness" Value="0,1,0,0"/>
-        <Setter Property="Margin" Value="0,0,16,0"/>
+        <Setter Property="Margin" Value="0,0,12,0"/>
     </Style>
 
     <!--MainPanel Styles-->
@@ -627,8 +627,10 @@
         <Setter Property="FontSize" Value="{StaticResource Titles}"/>
         <Setter Property="FontStyle" Value="{StaticResource Normal}"/>
         <Setter Property="FontWeight" Value="{StaticResource Regular}"/>
-        <Setter Property="Margin" Value="4,0"/>
+        <Setter Property="Margin" Value="10,0"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="Height" Value="32"/>
     </Style>
 
     <Style x:Key="DateTextStyles" TargetType="TextBlock">
@@ -682,6 +684,11 @@
                 <Setter Property="FontSize" Value="{StaticResource TaskItemDelete}"/>
                 <Setter Property="Background" Value="{StaticResource Transparent}"/>
                 <Setter Property="Foreground" Value="{DynamicResource UIElements}"/>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="{DynamicResource Transparent}"/>
+                    </Trigger>
+                </Style.Triggers>
             </Style>
         </Style.Resources>
     </Style>

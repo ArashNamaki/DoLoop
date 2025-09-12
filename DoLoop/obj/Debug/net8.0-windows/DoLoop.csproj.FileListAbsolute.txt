@@ -3,11 +3,9 @@ F:\MyProjects\Git-Projects\DoLoop\DoLoop\bin\Debug\net8.0-windows\DoLoop.deps.js
 F:\MyProjects\Git-Projects\DoLoop\DoLoop\bin\Debug\net8.0-windows\DoLoop.runtimeconfig.json
 F:\MyProjects\Git-Projects\DoLoop\DoLoop\bin\Debug\net8.0-windows\DoLoop.dll
 F:\MyProjects\Git-Projects\DoLoop\DoLoop\bin\Debug\net8.0-windows\DoLoop.pdb
-F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\MainWindow.g.cs
 F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\App.g.cs
 F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\DoLoop_MarkupCompile.cache
 F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\DoLoop_MarkupCompile.lref
-F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\MainWindow.baml
 F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\DoLoop.g.resources
 F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\DoLoop.GeneratedMSBuildEditorConfig.editorconfig
 F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\DoLoop.AssemblyInfoInputs.cache
@@ -22,5 +20,7 @@ F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\ref\DoLoop.dll
 F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\App.baml
 F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\Resources\Styles\Icons.baml
 F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\Resources\Styles\Styles.baml
-F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\TaskItemControl.g.cs
-F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\TaskItemControl.baml
+F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\Views\TaskItemControl.g.cs
+F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\Views\TaskItemControl.baml
+F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\Views\MainWindow.g.cs
+F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\Views\MainWindow.baml
