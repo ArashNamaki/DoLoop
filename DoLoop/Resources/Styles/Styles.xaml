@@ -165,7 +165,7 @@
     </Style>
 
     <!--ActiveBar Styles-->
-    <Style x:Key="ActiveBarStyles" TargetType="Grid">
+    <Style x:Key="ActiveBarStyles" TargetType="DockPanel">
         <Setter Property="Focusable" Value="False"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Style.Resources>
@@ -176,7 +176,7 @@
     </Style>
 
     <!--ActiveListTitle Styles-->
-    <Style x:Key="ActiveListTitleStyles" TargetType="Grid">
+    <Style x:Key="ActiveListTitleStyles" TargetType="DockPanel">
         <Setter Property="Focusable" Value="False"/>
         <Setter Property="Margin" Value="0"/>
     </Style>
@@ -581,9 +581,10 @@
         <Setter Property="FontStyle" Value="{DynamicResource Italic}"/>
         <Setter Property="Margin" Value="2,0,0,0"/>
         <Setter Property="Padding" Value="0"/>
+        <Setter Property="Height" Value="20"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="VerticalContentAlignment" Value="Top"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Style.Triggers>
             <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Grid}, Path=ActualWidth}" Value="376">
                 <Setter Property="Visibility" Value="Collapsed"/>
@@ -633,7 +634,7 @@
         <Setter Property="Height" Value="32"/>
     </Style>
 
-    <Style x:Key="DateTextStyles" TargetType="TextBlock">
+    <Style x:Key="DateTextStyles" TargetType="Label">
         <Setter Property="Focusable" Value="False"/>
         <Setter Property="Foreground" Value="{DynamicResource UIElements}"/>
         <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
@@ -642,6 +643,8 @@
         <Setter Property="FontWeight" Value="{StaticResource Thin}"/>
         <Setter Property="Margin" Value="4,0"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Height" Value="32"/>
     </Style>
     
     <!--Tasks-->

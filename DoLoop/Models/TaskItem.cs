@@ -15,16 +15,52 @@ namespace DoLoop
     }
     public class TaskItem : INotifyPropertyChanged
     {
-        private string _icon { get; set; }   
-        private string _description { get; set; }    
-        private TaskType _type { get; set; }
-        private readonly bool IsCompleted;
-
-        public string Icon { get => _icon; set { _icon = value; OnPropertyChanged(); } }
-        public string Description { get => _description; set { _description = value; OnPropertyChanged(); } }    
+        private string _description;
+        private TaskType _type;
+        private bool _isCompleted;
+        
+        public string Description 
+        {
+            get => _description;
+            set
+            {
+                if (_description != value)
+                {
+                    _description = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        public TaskType Type
+        {
+            get => _type;
+            set
+            {
+                if (_type != value)
+                {
+                    _type = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+        public bool IsCompleted
+        {
+            get => _isCompleted;
+            set
+            {
+                if (_isCompleted != value)
+                {
+                    _isCompleted = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
-        void OnPropertyChanged([CallerMemberName] string name = null) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
 
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 }

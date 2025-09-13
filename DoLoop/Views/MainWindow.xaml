@@ -46,41 +46,24 @@
             </Grid.RowDefinitions>
 
             <!--ActiveBar-->
-            <Grid Grid.Row="0" Name="ActiveBar" Style="{StaticResource ActiveBarStyles}">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="auto"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Grid Grid.Column="0" Margin="0,0,12,0">
+            <DockPanel Grid.Row="0" Name="ActiveBar" Style="{StaticResource ActiveBarStyles}">
+                <Grid Margin="0,0,12,0">
                     <Button Name="BoardTitleIcon" Click="BoardTitleIcon_Click" Template="{DynamicResource BoardIconButton}" ContentStringFormat="{StaticResource Box}"/>
                 </Grid>
-
-                <Grid Grid.Column="1" Name="ActiveList_Title" Style="{StaticResource ActiveListTitleStyles}">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <WrapPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Stretch">
-                        <Grid Name="BoardTitle" HorizontalAlignment="Stretch">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="auto"/>
-                                <ColumnDefinition Width="auto"/>
-                                <ColumnDefinition Width="auto"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <Button Grid.Column="0" Template="{StaticResource MiniButton}" ContentStringFormat="{StaticResource Left}"/>
-                            <TextBlock Grid.Column="1" Name="BoardTitleTxt" Style="{StaticResource BoardTitleTextStyles}" Text="BoardTitle"/>
-                            <Button Grid.Column="2" Template="{StaticResource MiniButton}" ContentStringFormat="{StaticResource Right}"/>
-                            <Grid Grid.Column="3" HorizontalAlignment="Stretch"/>
-                        </Grid>
-                        <StackPanel Grid.Column="3" Name="Date" Orientation="Horizontal">
-                            <TextBlock Name="Date_Day" Style="{StaticResource DateTextStyles}" Text="Sun"/>
-                            <TextBlock Name="Date_Month" Style="{StaticResource DateTextStyles}" Text="jul 24"/>
-                            <TextBlock Name="Date_Year" Style="{StaticResource DateTextStyles}" Text="2025"/>
-                            <Button Template="{StaticResource MiniButton}" ContentStringFormat="{StaticResource Pin}"/>
-                        </StackPanel>
-                    </WrapPanel>
-                </Grid>
-            </Grid>
+                <DockPanel Name="ActiveList_Title" Style="{StaticResource ActiveListTitleStyles}">
+                    <StackPanel Name="BoardTitle" DockPanel.Dock="Left" Orientation="Horizontal">
+                        <Button Grid.Column="0" Template="{StaticResource MiniButton}" ContentStringFormat="{StaticResource Left}"/>
+                        <TextBlock Grid.Column="1" Name="BoardTitleTxt" Style="{StaticResource BoardTitleTextStyles}" Text="BoardTitle"/>
+                        <Button Grid.Column="2" Template="{StaticResource MiniButton}" ContentStringFormat="{StaticResource Right}"/>
+                    </StackPanel>
+                    <StackPanel Name="Date" DockPanel.Dock="Right" Orientation="Horizontal" HorizontalAlignment="Right">
+                        <Label Grid.Column="0" Name="Date_Day" Style="{StaticResource DateTextStyles}" Content="Sun"/>
+                        <Label Grid.Column="1" Name="Date_Month" Style="{StaticResource DateTextStyles}" Content="jul 24"/>
+                        <Label Grid.Column="2" Name="Date_Year" Style="{StaticResource DateTextStyles}" Content="2025"/>
+                        <Button Grid.Column="3" Template="{StaticResource MiniButton}" ContentStringFormat="{StaticResource Pin}"/>
+                    </StackPanel>
+                </DockPanel>
+            </DockPanel>
 
             <!--Main-->
             <Grid Grid.Row="1" Name="Main" Style="{StaticResource MainStyles}">
