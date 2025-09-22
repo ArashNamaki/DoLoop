@@ -24,3 +24,4 @@ F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\Views\TaskItem
 F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\Views\TaskItemControl.baml
 F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\Views\MainWindow.g.cs
 F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\Views\MainWindow.baml
+F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs

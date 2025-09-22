@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:DoLoop.ViewModels"
         xmlns:local="clr-namespace:DoLoop"
         mc:Ignorable="d"
         Height="700" Width="500" MinHeight="450" MinWidth="250"
@@ -10,6 +11,10 @@
         AllowsTransparency="True" Background="Transparent"
         Icon="{StaticResource AppLogoBaBack}" WindowStartupLocation="CenterOwner" 
         KeyDown="Window_KeyDown">
+
+    <Window.DataContext>
+        <vm:MainViewModel />
+    </Window.DataContext>
 
     <Grid Name="AppWindow" Style="{StaticResource WindowStyles}">
         <Grid.RowDefinitions>
@@ -129,20 +134,26 @@
                                 </Grid.ColumnDefinitions>
                                 <Grid Grid.Column="0">
                                     <Border Style="{DynamicResource TaskInputStyles}">
-                                        <TextBox Name="AddTaskInput" KeyDown="AddTaskInput_KeyDown"/>
+                                        <TextBox Name="AddTaskInput" 
+                                                 Text="{Binding NewTaskText, UpdateSourceTrigger=PropertyChanged}">
+                                            <TextBox.InputBindings>
+                                                <KeyBinding Key="Enter" Command="{Binding AddTaskCommand}"/>
+                                            </TextBox.InputBindings>
+                                        </TextBox>
                                     </Border>
                                 </Grid>
                                 <Grid Grid.Column="1" VerticalAlignment="Center">
                                     <Button Name="AddTaskButton" Template="{StaticResource SecondBoardButton}" ContentStringFormat="{StaticResource Plus}"
-                                            Click="AddTaskButton_Click"/>
+                                          Command="{Binding AddTaskCommand}"/>
                                 </Grid>
                             </Grid>
                             <!--Task Types-->
                             <Grid Grid.Row="1" Name="TaskTypeGroup" Visibility="Visible">
                                 <WrapPanel Style="{DynamicResource TaskTypeStyles}">
                                     <WrapPanel>
-                                        <RadioButton x:Name="NormalTask" GroupName="TaskType" Template="{StaticResource TaskRadio}" 
-                                                     BorderBrush="{DynamicResource NormalTask}" Background="{DynamicResource NormalTask}" IsChecked="True"/>
+                                        <RadioButton x:Name="NormalTask" GroupName="TaskType" Template="{StaticResource TaskRadio}"
+                                                     BorderBrush="{DynamicResource NormalTask}" Background="{DynamicResource NormalTask}" 
+                                                     />
                                         <Label Template="{StaticResource TaskRadioIcon}" Content="{DynamicResource Coffee}" Foreground="{DynamicResource NormalTask}"/>
                                         <Label Template="{StaticResource TaskRadioText}" VerticalAlignment="Center"
                                                Content="Normal" Foreground="{DynamicResource NormalTask}"/>

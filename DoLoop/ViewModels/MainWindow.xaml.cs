@@ -20,7 +20,7 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
-
+        
         AddTaskInput.GotFocus += AddTaskInput_GotFocus;
     }
 
