@@ -648,12 +648,33 @@
     </Style>
     
     <!--Tasks-->
+    <Style x:Key="ScrollTaskStyles" TargetType="ScrollViewer">
+        <Style.Resources>
+            <Style TargetType="ScrollBar">
+                <Setter Property="Background" Value="{StaticResource UIBackground}"/>
+                <Setter Property="Width" Value="10"/>
+                <Setter Property="OverridesDefaultStyle" Value="True"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="ScrollBar">
+                            <Track Name="PART_Track" IsDirectionReversed="True">
+                                <Track.Thumb>
+                                    <Thumb Background="{StaticResource UIForegroundTransparent}" BorderThickness="0"
+                                           BorderBrush="{StaticResource Transparent}"/>
+                                </Track.Thumb>
+                            </Track>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Style.Resources>
+    </Style>
+
     <Style x:Key="TaskItemSimpleStyles" TargetType="Border">
         <Setter Property="Focusable" Value="False"/>
         <Setter Property="Background" Value="{DynamicResource Transparent}"/>
         <Setter Property="Padding" Value="0,4"/>
         <Setter Property="Margin" Value="0,2"/>
-        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="Stretch"/>
         <Style.Resources>
@@ -666,10 +687,10 @@
                 <Setter Property="FontWeight" Value="{StaticResource Regular}"/>
                 <Setter Property="VerticalAlignment" Value="Top"/>
                 <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="0,0,4,0"/>
             </Style>
             <Style TargetType="TextBlock">
                 <Setter Property="Focusable" Value="False"/>
-                <Setter Property="Foreground" Value="{DynamicResource UIElements}"/>
                 <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
                 <Setter Property="FontSize" Value="{StaticResource Tasks}"/>
                 <Setter Property="FontStyle" Value="{StaticResource Italic}"/>
@@ -677,23 +698,23 @@
                 <Setter Property="TextWrapping" Value="Wrap"/>
                 <Setter Property="VerticalAlignment" Value="Center"/>
                 <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="Margin" Value="0,0,4,0"/>
+                <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
             </Style>
             <Style TargetType="Button">
                 <Setter Property="Focusable" Value="False"/>
                 <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="Width" Value="24"/>
+                <Setter Property="Height" Value="24"/>
                 <Setter Property="VerticalAlignment" Value="Top"/>
                 <Setter Property="HorizontalAlignment" Value="Center"/>
                 <Setter Property="FontFamily" Value="{StaticResource PrimaryIcon}"/>
                 <Setter Property="FontSize" Value="{StaticResource TaskItemDelete}"/>
+                <Setter Property="Content" Value="{StaticResource CloseIcon}"/>
                 <Setter Property="Background" Value="{StaticResource Transparent}"/>
-                <Setter Property="Foreground" Value="{DynamicResource UIElements}"/>
-                <Style.Triggers>
-                    <Trigger Property="IsMouseOver" Value="True">
-                        <Setter Property="Background" Value="{DynamicResource Transparent}"/>
-                    </Trigger>
-                </Style.Triggers>
+                <Setter Property="Cursor" Value="Hand"/>
             </Style>
         </Style.Resources>
     </Style>
-    
+
 </ResourceDictionary>

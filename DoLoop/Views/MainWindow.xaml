@@ -112,13 +112,35 @@
                             <RowDefinition Height="auto"/>
                         </Grid.RowDefinitions>
                         <!--Task List-->
-                        <Grid Grid.Row="0" Name="TaskList">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-                            <StackPanel x:Name="TaskItemList" Orientation="Vertical" ScrollViewer.VerticalScrollBarVisibility="Visible"
-                                        CanVerticallyScroll="True" SelectiveScrollingGrid.SelectiveScrollingOrientation="Vertical" ScrollViewer.CanContentScroll="True" ClipToBounds="True" Grid.RowSpan="2">
-                            </StackPanel>
+                        <Grid Grid.Row="0">
+                            <ScrollViewer Style="{StaticResource ScrollTaskStyles}">
+                                <ItemsControl ItemsSource="{Binding Tasks}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <StackPanel Orientation="Vertical"/>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <Border Style="{DynamicResource TaskItemSimpleStyles}">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="auto"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                        <ColumnDefinition Width="auto"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Label Grid.Column="0" Content="{Binding Type, Converter={StaticResource TaskTypeToIconConverter}}" Foreground="{Binding Type, Converter={StaticResource TaskTypeToBrushConverter}}"/>
+                                                    <TextBlock Grid.Column="1" Text="{Binding Description}" Foreground="{Binding Type, Converter={StaticResource TaskTypeToBrushConverter}}"/>
+                                                    <Button Grid.Column="2" Foreground="{Binding Type, Converter={StaticResource TaskTypeToBrushConverter}}"
+                                                            Command="{Binding DataContext.DeleteTaskCommand, RelativeSource={RelativeSource AncestorType=Window}}" 
+                                                            CommandParameter="{Binding}"/>
+                                                </Grid>
+                                            </Border>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </ScrollViewer>
                         </Grid>
                         <!--Inputbar-->
                         <Grid Grid.Row="1">
@@ -153,21 +175,23 @@
                                     <WrapPanel>
                                         <RadioButton x:Name="NormalTask" GroupName="TaskType" Template="{StaticResource TaskRadio}"
                                                      BorderBrush="{DynamicResource NormalTask}" Background="{DynamicResource NormalTask}" 
-                                                     />
+                                                     IsChecked="{Binding SelectedType, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Normal}"/>
                                         <Label Template="{StaticResource TaskRadioIcon}" Content="{DynamicResource Coffee}" Foreground="{DynamicResource NormalTask}"/>
                                         <Label Template="{StaticResource TaskRadioText}" VerticalAlignment="Center"
                                                Content="Normal" Foreground="{DynamicResource NormalTask}"/>
                                     </WrapPanel>
                                     <WrapPanel>
                                         <RadioButton x:Name="ImportantTask" GroupName="TaskType" Template="{StaticResource TaskRadio}" 
-                                                     Background="{DynamicResource ImportantTask}" BorderBrush="{DynamicResource ImportantTask}"/>
+                                                     Background="{DynamicResource ImportantTask}" BorderBrush="{DynamicResource ImportantTask}"
+                                                     IsChecked="{Binding SelectedType, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Important}"/>
                                         <Label Template="{StaticResource TaskRadioIcon}" Content="{DynamicResource AlertTriangle}" Foreground="{DynamicResource ImportantTask}"/>
                                         <Label Template="{StaticResource TaskRadioText}" VerticalAlignment="Center"
                                                Content="Important" Foreground="{DynamicResource ImportantTask}"/>
                                     </WrapPanel>
                                     <WrapPanel>
                                         <RadioButton x:Name="QuickTask" GroupName="TaskType" Template="{StaticResource TaskRadio}" 
-                                                     Background="{DynamicResource QuickTask}" BorderBrush="{DynamicResource QuickTask}"/>
+                                                     Background="{DynamicResource QuickTask}" BorderBrush="{DynamicResource QuickTask}"
+                                                     IsChecked="{Binding SelectedType, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Quick}"/>
                                         <Label Template="{StaticResource TaskRadioIcon}" Content="{DynamicResource Zap}" Foreground="{DynamicResource QuickTask}"/>
                                         <Label Template="{StaticResource TaskRadioText}" VerticalAlignment="Center"
                                                Content="Quick" Foreground="{DynamicResource QuickTask}"/>

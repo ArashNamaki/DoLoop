@@ -3,36 +3,28 @@
   "WorkspaceRootPath": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{089AFCB0-B10B-4762-A818-378099CB9F11}|DoLoop.csproj|f:\\myprojects\\git-projects\\doloop\\doloop\\converters\\tasktypetobrushconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{089AFCB0-B10B-4762-A818-378099CB9F11}|DoLoop.csproj|solutionrelative:converters\\tasktypetobrushconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{089AFCB0-B10B-4762-A818-378099CB9F11}|DoLoop.csproj|f:\\myprojects\\git-projects\\doloop\\doloop\\resources\\styles\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{089AFCB0-B10B-4762-A818-378099CB9F11}|DoLoop.csproj|solutionrelative:resources\\styles\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{089AFCB0-B10B-4762-A818-378099CB9F11}|DoLoop.csproj|f:\\myprojects\\git-projects\\doloop\\doloop\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{089AFCB0-B10B-4762-A818-378099CB9F11}|DoLoop.csproj|solutionrelative:views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{089AFCB0-B10B-4762-A818-378099CB9F11}|DoLoop.csproj|f:\\myprojects\\git-projects\\doloop\\doloop\\converters\\tasktypetoiconconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{089AFCB0-B10B-4762-A818-378099CB9F11}|DoLoop.csproj|solutionrelative:converters\\tasktypetoiconconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{089AFCB0-B10B-4762-A818-378099CB9F11}|DoLoop.csproj|f:\\myprojects\\git-projects\\doloop\\doloop\\resources\\styles\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{089AFCB0-B10B-4762-A818-378099CB9F11}|DoLoop.csproj|solutionrelative:resources\\styles\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{089AFCB0-B10B-4762-A818-378099CB9F11}|DoLoop.csproj|f:\\myprojects\\git-projects\\doloop\\doloop\\viewmodels\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{089AFCB0-B10B-4762-A818-378099CB9F11}|DoLoop.csproj|solutionrelative:viewmodels\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{089AFCB0-B10B-4762-A818-378099CB9F11}|DoLoop.csproj|f:\\myprojects\\git-projects\\doloop\\doloop\\models\\taskitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{089AFCB0-B10B-4762-A818-378099CB9F11}|DoLoop.csproj|solutionrelative:models\\taskitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{089AFCB0-B10B-4762-A818-378099CB9F11}|DoLoop.csproj|f:\\myprojects\\git-projects\\doloop\\doloop\\helpers\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{089AFCB0-B10B-4762-A818-378099CB9F11}|DoLoop.csproj|solutionrelative:helpers\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{089AFCB0-B10B-4762-A818-378099CB9F11}|DoLoop.csproj|f:\\myprojects\\git-projects\\doloop\\doloop\\converters\\enumtobooleanconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{089AFCB0-B10B-4762-A818-378099CB9F11}|DoLoop.csproj|solutionrelative:converters\\enumtobooleanconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{089AFCB0-B10B-4762-A818-378099CB9F11}|DoLoop.csproj|f:\\myprojects\\git-projects\\doloop\\doloop\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{089AFCB0-B10B-4762-A818-378099CB9F11}|DoLoop.csproj|solutionrelative:viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{089AFCB0-B10B-4762-A818-378099CB9F11}|DoLoop.csproj|f:\\myprojects\\git-projects\\doloop\\doloop\\converters\\tasktypetoiconconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{089AFCB0-B10B-4762-A818-378099CB9F11}|DoLoop.csproj|solutionrelative:converters\\tasktypetoiconconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{089AFCB0-B10B-4762-A818-378099CB9F11}|DoLoop.csproj|f:\\myprojects\\git-projects\\doloop\\doloop\\models\\taskitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{089AFCB0-B10B-4762-A818-378099CB9F11}|DoLoop.csproj|solutionrelative:models\\taskitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 185,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,64 +46,51 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TaskTypeToBrushConverter.cs",
-              "DocumentMoniker": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\Converters\\TaskTypeToBrushConverter.cs",
-              "RelativeDocumentMoniker": "Converters\\TaskTypeToBrushConverter.cs",
-              "ToolTip": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\Converters\\TaskTypeToBrushConverter.cs",
-              "RelativeToolTip": "Converters\\TaskTypeToBrushConverter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "TaskItem.cs",
+              "DocumentMoniker": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\Models\\TaskItem.cs",
+              "RelativeDocumentMoniker": "Models\\TaskItem.cs",
+              "ToolTip": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\Models\\TaskItem.cs",
+              "RelativeToolTip": "Models\\TaskItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T19:26:07.483Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-23T13:06:34.001Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "TaskTypeToIconConverter.cs",
               "DocumentMoniker": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\Converters\\TaskTypeToIconConverter.cs",
               "RelativeDocumentMoniker": "Converters\\TaskTypeToIconConverter.cs",
               "ToolTip": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\Converters\\TaskTypeToIconConverter.cs",
               "RelativeToolTip": "Converters\\TaskTypeToIconConverter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-22T19:17:22.738Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "MainViewModel.cs",
               "DocumentMoniker": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\ViewModels\\MainViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\MainViewModel.cs",
               "ToolTip": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\ViewModels\\MainViewModel.cs",
               "RelativeToolTip": "ViewModels\\MainViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwAkAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T16:44:15.048Z"
+              "WhenOpened": "2025-09-23T10:12:41.972Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "RelayCommand.cs",
-              "DocumentMoniker": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\Helpers\\RelayCommand.cs",
-              "RelativeDocumentMoniker": "Helpers\\RelayCommand.cs",
-              "ToolTip": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\Helpers\\RelayCommand.cs",
-              "RelativeToolTip": "Helpers\\RelayCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAuAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "EnumToBooleanConverter.cs",
+              "DocumentMoniker": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\Converters\\EnumToBooleanConverter.cs",
+              "RelativeDocumentMoniker": "Converters\\EnumToBooleanConverter.cs",
+              "ToolTip": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\Converters\\EnumToBooleanConverter.cs",
+              "RelativeToolTip": "Converters\\EnumToBooleanConverter.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAowBgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T16:30:52.184Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\ViewModels\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "ViewModels\\MainWindow.xaml.cs",
-              "ToolTip": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\ViewModels\\MainWindow.xaml.cs",
-              "RelativeToolTip": "ViewModels\\MainWindow.xaml.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAcwDcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-12T16:53:26.571Z"
+              "WhenOpened": "2025-09-23T09:12:02.647Z"
             },
             {
               "$type": "Document",
@@ -122,30 +101,20 @@
               "ToolTip": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\Views\\MainWindow.xaml",
               "RelativeToolTip": "Views\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-09-10T20:44:55.068Z"
+              "WhenOpened": "2025-09-10T20:44:55.068Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TaskItem.cs",
-              "DocumentMoniker": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\Models\\TaskItem.cs",
-              "RelativeDocumentMoniker": "Models\\TaskItem.cs",
-              "ToolTip": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\Models\\TaskItem.cs",
-              "RelativeToolTip": "Models\\TaskItem.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAiwBgAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T12:26:13.796Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Styles.xaml",
               "DocumentMoniker": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\Resources\\Styles\\Styles.xaml",
               "RelativeDocumentMoniker": "Resources\\Styles\\Styles.xaml",
               "ToolTip": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\Resources\\Styles\\Styles.xaml",
               "RelativeToolTip": "Resources\\Styles\\Styles.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-09-08T15:48:24.924Z"
+              "WhenOpened": "2025-09-23T10:39:37.32Z",
+              "EditorCaption": ""
             }
           ]
         }
