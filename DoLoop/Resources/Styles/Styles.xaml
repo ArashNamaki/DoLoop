@@ -649,25 +649,8 @@
     
     <!--Tasks-->
     <Style x:Key="ScrollTaskStyles" TargetType="ScrollViewer">
-        <Style.Resources>
-            <Style TargetType="ScrollBar">
-                <Setter Property="Background" Value="{StaticResource UIBackground}"/>
-                <Setter Property="Width" Value="10"/>
-                <Setter Property="OverridesDefaultStyle" Value="True"/>
-                <Setter Property="Template">
-                    <Setter.Value>
-                        <ControlTemplate TargetType="ScrollBar">
-                            <Track Name="PART_Track" IsDirectionReversed="True">
-                                <Track.Thumb>
-                                    <Thumb Background="{StaticResource UIForegroundTransparent}" BorderThickness="0"
-                                           BorderBrush="{StaticResource Transparent}"/>
-                                </Track.Thumb>
-                            </Track>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Style>
-        </Style.Resources>
+        <Setter Property="VerticalScrollBarVisibility" Value="Auto"/>
+        <Setter Property="HorizontalScrollBarVisibility" Value="Disabled"/>
     </Style>
 
     <Style x:Key="TaskItemSimpleStyles" TargetType="Border">
@@ -677,6 +660,25 @@
         <Setter Property="Margin" Value="0,2"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="Opacity" Value="1"/>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsCompleted}" Value="True">
+                <DataTrigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" To="0.4" Duration="0:0:0.5"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </DataTrigger.EnterActions>
+                <DataTrigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.5"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </DataTrigger.ExitActions>
+            </DataTrigger>
+        </Style.Triggers>
         <Style.Resources>
             <Style TargetType="Label">
                 <Setter Property="Focusable" Value="False"/>
@@ -716,5 +718,7 @@
             </Style>
         </Style.Resources>
     </Style>
+
+
 
 </ResourceDictionary>

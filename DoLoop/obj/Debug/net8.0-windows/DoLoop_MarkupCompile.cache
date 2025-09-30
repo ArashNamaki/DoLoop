@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-F:\MyProjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\
+E:\Porjects\Git-Projects\DoLoop\DoLoop\obj\Debug\net8.0-windows\
 DoLoop
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-F:\MyProjects\Git-Projects\DoLoop\DoLoop\App.xaml
-4-1439249639
+E:\Porjects\Git-Projects\DoLoop\DoLoop\App.xaml
+5-1213547042
 
 11938211661
-198-1588478740
-Resources\Styles\Icons.xaml;Resources\Styles\Styles.xaml;Views\MainWindow.xaml;Views\TaskItemControl.xaml;
+198-192518753
+Resources\Controls\DoLoopScrollBar.xaml;Resources\Styles\Icons.xaml;Resources\Styles\Styles.xaml;Views\MainWindow.xaml;Views\TaskItemControl.xaml;
 
 False
 

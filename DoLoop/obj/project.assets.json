@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\DoLoop.csproj",
+      "projectUniqueName": "E:\\Porjects\\Git-Projects\\DoLoop\\DoLoop\\DoLoop.csproj",
       "projectName": "DoLoop",
-      "projectPath": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\DoLoop.csproj",
+      "projectPath": "E:\\Porjects\\Git-Projects\\DoLoop\\DoLoop\\DoLoop.csproj",
       "packagesPath": "C:\\Users\\Arash\\.nuget\\packages\\",
-      "outputPath": "F:\\MyProjects\\Git-Projects\\DoLoop\\DoLoop\\obj\\",
+      "outputPath": "E:\\Porjects\\Git-Projects\\DoLoop\\DoLoop\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -75,7 +75,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
