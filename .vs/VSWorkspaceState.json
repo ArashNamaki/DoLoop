@@ -1,6 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Resources",
+    "\\Resources\\Styles"
   ],
   "SelectedNode": "\\DoLoop.sln",
   "PreviewInSolutionExplorer": false
