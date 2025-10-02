@@ -9,8 +9,7 @@
         Height="700" Width="500" MinHeight="450" MinWidth="250"
         Title="DoLoop" ResizeMode="CanResizeWithGrip" WindowStyle="None"
         AllowsTransparency="True" Background="Transparent"
-        Icon="{StaticResource AppLogoBaBack}" WindowStartupLocation="CenterOwner" 
-        KeyDown="Window_KeyDown">
+        Icon="{StaticResource AppIcon2}" WindowStartupLocation="CenterOwner">
 
     <Window.DataContext>
         <vm:MainViewModel />
@@ -30,7 +29,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="0">
-                    <Label Style="{StaticResource AppTitle}" Content="DoLoop"/>
+                    <Label ToolTip="DoLoop V 0.0.1" Style="{StaticResource AppTitle}" Content="DoLoop"/>
                 </Grid>
                 <Grid Grid.Column="1" HorizontalAlignment="Right">
                     <Grid.ColumnDefinitions>
@@ -58,10 +57,10 @@
                 <DockPanel Name="ActiveList_Title" Style="{StaticResource ActiveListTitleStyles}">
                     <StackPanel Name="BoardTitle" DockPanel.Dock="Left" Orientation="Horizontal">
                         <Button Grid.Column="0" Template="{StaticResource MiniButton}" ContentStringFormat="{StaticResource Left}"/>
-                        <TextBlock Grid.Column="1" Name="BoardTitleTxt" Style="{StaticResource BoardTitleTextStyles}" Text="BoardTitle"/>
+                        <TextBox Grid.Column="1" Name="BoardTitleTxt" Style="{StaticResource BoardTitleTextStyles}" Text="To Do"/>
                         <Button Grid.Column="2" Template="{StaticResource MiniButton}" ContentStringFormat="{StaticResource Right}"/>
                     </StackPanel>
-                    <StackPanel Name="Date" DockPanel.Dock="Right" Orientation="Horizontal" HorizontalAlignment="Right">
+                    <StackPanel IsEnabled="False" Visibility="Hidden" Name="Date" DockPanel.Dock="Right" Orientation="Horizontal" HorizontalAlignment="Right">
                         <Label Grid.Column="0" Name="Date_Day" Style="{StaticResource DateTextStyles}" Content="Sun"/>
                         <Label Grid.Column="1" Name="Date_Month" Style="{StaticResource DateTextStyles}" Content="jul 24"/>
                         <Label Grid.Column="2" Name="Date_Year" Style="{StaticResource DateTextStyles}" Content="2025"/>
@@ -78,14 +77,15 @@
                 </Grid.ColumnDefinitions>
 
                 <!--SideBar-->
-                <Border Grid.Column="0" Name="SideBar" Visibility="Visible" Style="{DynamicResource SidebarTopLine}">
+                <Border Grid.Column="0" Name="SideBar" Visibility="Visible" Style="{DynamicResource SidebarTopLine}"
+                        ToolTip="Some features are not available now, they'll come soon :)">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="0"/>
                             <RowDefinition Height="auto"/>
                         </Grid.RowDefinitions>
-                        <Grid Grid.Row="0" Name="SideBar_Top">
+                        <Grid IsEnabled="False" Opacity="0.2" Grid.Row="0" Name="SideBar_Top">
                             <StackPanel Style="{StaticResource SidebarStackpanelTop}">
                                 <Button Template="{StaticResource SecondBoardButton}" ContentStringFormat="{StaticResource Plus}"/>
                                 <Button Template="{StaticResource SecondSmallBoardButton}" ContentStringFormat="{StaticResource Terminal}"/>
@@ -123,27 +123,32 @@
                                             <StackPanel Orientation="Vertical"/>
                                         </ItemsPanelTemplate>
                                     </ItemsControl.ItemsPanel>
-                                    
+
                                     <ItemsControl.ItemTemplate>
                                         <DataTemplate>
                                             <Border Style="{DynamicResource TaskItemSimpleStyles}">
-                                                <Grid>
-                                                    <Grid.ColumnDefinitions>
-                                                        <ColumnDefinition Width="auto"/>
-                                                        <ColumnDefinition Width="*"/>
-                                                        <ColumnDefinition Width="auto"/>
-                                                    </Grid.ColumnDefinitions>
-                                                    <Label Grid.Column="0" Content="{Binding Type, Converter={StaticResource TaskTypeToIconConverter}}" Foreground="{Binding Type, Converter={StaticResource TaskTypeToBrushConverter}}"/>
-                                                    <TextBlock Grid.Column="1" Text="{Binding Description}" Foreground="{Binding Type, Converter={StaticResource TaskTypeToBrushConverter}}"/>
-                                                    <Button Grid.Column="2" Foreground="{Binding Type, Converter={StaticResource TaskTypeToBrushConverter}}"
+                                                <ToggleButton IsChecked="{Binding IsCompleted}">
+                                                    <Grid>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="auto"/>
+                                                            <ColumnDefinition Width="*"/>
+                                                            <ColumnDefinition Width="auto"/>
+                                                        </Grid.ColumnDefinitions>
+                                                        <Label Grid.Column="0" Content="{Binding Type, Converter={StaticResource TaskTypeToIconConverter}}" Foreground="{Binding Type, Converter={StaticResource TaskTypeToBrushConverter}}"/>
+                                                        <TextBlock Grid.Column="1" Text="{Binding Description}" Foreground="{Binding Type, Converter={StaticResource TaskTypeToBrushConverter}}"/>
+                                                        <Button Grid.Column="2" Template="{StaticResource TaskDeleteButton}"
+                                                            Foreground="{Binding Type, Converter={StaticResource TaskTypeToBrushConverter}}"
                                                             Command="{Binding DataContext.DeleteTaskCommand, RelativeSource={RelativeSource AncestorType=Window}}" 
                                                             CommandParameter="{Binding}"/>
-                                                </Grid>
+                                                    </Grid>
+                                                </ToggleButton>
                                             </Border>
                                         </DataTemplate>
                                     </ItemsControl.ItemTemplate>
                                 </ItemsControl>
                             </ScrollViewer>
+                            <TextBlock Text="↳ No Tasks yet. Add one to get started!"
+                                       Style="{StaticResource EmptyListMessage}"/>
                         </Grid>
                         <!--Inputbar-->
                         <Grid Grid.Row="1">
@@ -166,6 +171,7 @@
                                             </TextBox.InputBindings>
                                         </TextBox>
                                     </Border>
+                                    
                                 </Grid>
                                 <Grid Grid.Column="1" VerticalAlignment="Center">
                                     <Button Name="AddTaskButton" Template="{StaticResource SecondBoardButton}" ContentStringFormat="{StaticResource Plus}"

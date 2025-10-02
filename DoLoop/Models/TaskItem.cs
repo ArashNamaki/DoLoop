@@ -7,7 +7,8 @@ using System.Windows.Media;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace DoLoop
+
+namespace DoLoop.Models
 {
     public enum TaskType
     {

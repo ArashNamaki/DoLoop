@@ -85,6 +85,22 @@
             </DrawingGroup>
         </DrawingImage.Drawing>
     </DrawingImage>
+     
+    <DrawingImage x:Key="AppIcon">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V100 H100 V0 H0 Z">
+                <GeometryDrawing Brush="{DynamicResource UIElements}" Geometry="F1 M100,100z M0,0z M12.2992,45.2237C12.8805,45.6269 13.536,45.9118 14.228,46.0621 14.92,46.2124 15.6349,46.2253 16.3319,46.0998 17.0289,45.9744 17.6942,45.7132 18.2897,45.3312 18.8852,44.9492 19.3993,44.4539 19.8024,43.8736 20.3982,42.994 21.0382,42.1936 21.7091,41.4019L25.6813,70.9121C25.6995,71.1565 25.8143,71.3837 26.0005,71.5437 26.0927,71.6229 26.1997,71.6832 26.3153,71.7213 26.431,71.7593 26.553,71.7743 26.6744,71.7653 26.7958,71.7564 26.9143,71.7237 27.023,71.6691 27.1318,71.6145 27.2287,71.5391 27.3082,71.4473 27.3877,71.3554 27.4483,71.2488 27.4864,71.1336 27.5246,71.0184 27.5396,70.8968 27.5306,70.7758L26.9833,36.5378C27.2349,36.3619 27.4865,36.1816 27.7425,36.0101 29.2729,35.0244 30.9143,34.2214 32.6328,33.6176 33.4779,33.3328 34.3422,33.1079 35.2192,32.9447 37.8762,32.4361 40.6139,32.5293 43.2299,33.2174 44.9421,33.6726 46.5664,34.4083 48.0364,35.3943 49.4813,36.3988 50.7264,37.6619 51.7085,39.1194 52.7091,40.6651 53.4542,42.3608 53.9153,44.1419 54.3865,45.9933 54.5915,47.902 54.5244,49.8108 54.4479,51.5676 54.1513,53.308 53.6417,54.9916 52.9002,54.286 52.2264,53.513 51.6291,52.6827 50.5757,51.1701 49.8208,49.4716 49.4046,47.6778 48.9832,45.8206 48.864,43.9081 49.0515,42.0132 49.0838,41.6924 48.9893,41.3716 48.7882,41.1189 48.5871,40.8663 48.2951,40.7016 47.9742,40.6598 47.6533,40.6181 47.3287,40.7025 47.0692,40.8952 46.8097,41.088 46.6358,41.3738 46.5843,41.6922 46.1866,43.8552 46.1419,46.0679 46.4519,48.2451 46.7871,50.4801 47.5465,52.6309 48.6896,54.5826 49.632,56.158 50.7825,57.6003 52.1101,58.8706 51.7482,59.5889 51.3554,60.2911 50.9317,60.9772 49.8305,62.7201 48.5655,64.3547 47.1536,65.8589 45.711,67.3796 44.1431,68.7771 42.4664,70.0369 40.7527,71.3088 38.9585,72.4694 37.095,73.5113 33.2761,75.59 29.2901,77.3479 25.1782,78.7669 24.9136,78.8473 24.692,79.0292 24.562,79.2725 24.4321,79.5159 24.4045,79.8006 24.4852,80.0642 24.566,80.3279 24.7486,80.5487 24.9927,80.6782 25.2369,80.8077 25.5227,80.8352 25.7872,80.7547 30.1485,79.6348 34.409,78.1564 38.525,76.3348 40.6024,75.3774 42.6149,74.2858 44.5496,73.0671 46.5219,71.8292 48.3865,70.4287 50.124,68.8803 51.8768,67.3006 53.4717,65.5552 54.8863,63.6687 55.3071,63.097 55.7102,62.5106 56.0957,61.9095 56.9623,62.4311 57.8633,62.894 58.7924,63.2949 61.9732,64.6917 65.4363,65.3331 68.9084,65.1684 70.0832,65.1114 71.2519,64.9644 72.404,64.7286 74.7297,64.2201 76.9539,63.3283 78.9847,62.0899 81.0308,60.8395 82.8634,59.2717 84.4135,57.4456 87.5838,53.7352 89.5098,49.1295 89.9217,44.2738 90.3406,39.2631 89.0701,34.2564 86.3114,30.0464 84.9276,27.9254 83.2109,26.0396 81.2269,24.4611 79.2329,22.8764 76.998,21.6189 74.6064,20.736 69.7032,18.9291 64.3528,18.7105 59.3176,20.1115L59.2161,20.1423C59.0664,20.1825 58.9191,20.231 58.7747,20.2874 57.4391,20.7913 56.3591,21.8032 55.7722,23.1006 55.1854,24.398 55.1398,25.8745 55.6455,27.2054 56.1511,28.5362 57.1667,29.6124 58.4687,30.1972 59.7707,30.782 61.2525,30.8274 62.5881,30.3235 64.7942,29.5058 67.166,29.2313 69.5015,29.5235 71.8369,29.8157 74.067,30.6659 76.0018,32.0017 77.9365,33.3375 79.5187,35.1193 80.6137,37.1956 81.7086,39.2718 82.2839,41.5809 82.2905,43.9264 82.282,46.4706 81.6765,48.9775 80.5224,51.247 79.3683,53.5165 77.6975,55.4856 75.6436,56.997 74.9424,57.5019 74.2048,57.9547 73.4368,58.3516 71.4341,59.3491 69.2474,59.9269 67.0118,60.0495 64.7762,60.172 62.5391,59.8366 60.4387,59.0641 59.6576,58.802 58.8953,58.4875 58.1568,58.1229 58.2627,57.8942 58.3687,57.6611 58.4702,57.4236 59.4383,55.1513 60.0873,52.7568 60.3989,50.3078 60.698,47.8197 60.6356,45.3016 60.2136,42.8313 59.7713,40.2917 58.9172,37.8407 57.6846,35.5747 56.3882,33.2419 54.6652,31.1715 52.6045,29.4703 50.5324,27.8019 48.1947,26.4908 45.6883,25.5913 43.2039,24.7235 40.6071,24.217 37.9777,24.0872 35.3361,23.9815 32.6927,24.248 30.1259,24.8789 29.0005,25.1631 27.8923,25.5111 26.8068,25.9212L26.8068,25.7629C26.8053,25.6231 26.795,25.4835 26.7759,25.345 26.7252,24.8694 26.5793,24.4087 26.3468,23.9902 26.1144,23.5717 25.8002,23.2039 25.4227,22.9084 25.0452,22.6129 24.6122,22.3958 24.1491,22.2699 23.686,22.144 23.2023,22.1118 22.7265,22.1753 22.2507,22.2388 21.7925,22.3966 21.379,22.6395 20.9655,22.8824 20.605,23.2054 20.3188,23.5894 20.0327,23.9735 19.8267,24.4107 19.7129,24.8754 19.5992,25.3401 19.5801,25.8228 19.6567,26.295L20.0716,29.3736C18.8459,30.1864 17.667,31.0674 16.5407,32.0123 14.6148,33.6452 12.8367,35.4436 11.2267,37.3866L11.2267,37.413C11.134,37.5229 11.0501,37.6373 10.9663,37.756 10.151,38.923 9.83341,40.3645 10.0833,41.7645 10.3332,43.1644 11.1301,44.4085 12.2992,45.2237z" />
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
+
+    <DrawingImage x:Key="AppIcon2">
+        <DrawingImage.Drawing>
+            <DrawingGroup ClipGeometry="M0,0 V50 H50 V0 H0 Z">
+                <GeometryDrawing Brush="{DynamicResource UIElements}" Geometry="F1 M50,50z M0,0z M30,0C41.0457,0,50,8.95431,50,20L50,30C50,41.0457,41.0457,50,30,50L10,50C4.47715,50,8.05346E-08,45.5228,0,40L0,20C0,8.95431,8.95431,1.61064E-07,20,0L30,0z M36.0732,11.6982C33.867,10.877,31.459,10.7774,29.1934,11.4141L29.1475,11.4287C29.0801,11.447 29.0132,11.4685 28.9482,11.4941 28.3473,11.7232 27.8617,12.1838 27.5977,12.7734 27.3337,13.363 27.3126,14.0339 27.54,14.6387 27.7676,15.2435 28.2247,15.7332 28.8105,15.999 29.3964,16.2648 30.064,16.2847 30.665,16.0557 31.6576,15.6841 32.7247,15.5596 33.7754,15.6924 34.8264,15.8252 35.8305,16.2122 36.7012,16.8193 37.5716,17.4265 38.2837,18.2361 38.7764,19.1797 39.2691,20.1234 39.5273,21.1731 39.5303,22.2393 39.5264,23.3955 39.2546,24.5349 38.7354,25.5664 38.216,26.5979 37.4642,27.4937 36.54,28.1807 36.2246,28.4101 35.8923,28.6155 35.5469,28.7959 34.6456,29.2493 33.6613,29.5127 32.6553,29.5684 31.6493,29.6241 30.6425,29.4713 29.6973,29.1201 29.3459,29.001 29.0031,28.858 28.6709,28.6924 28.7186,28.5884 28.7658,28.482 28.8115,28.374 29.2471,27.3412 29.5395,26.2527 29.6797,25.1396 29.8142,24.0088 29.7856,22.864 29.5957,21.7412 29.3967,20.5871 29.0126,19.4732 28.458,18.4434 27.8747,17.383 27.0992,16.4412 26.1719,15.668 25.2395,14.9097 24.1873,14.3141 23.0596,13.9053 21.9416,13.5108 20.773,13.2806 19.5898,13.2217 18.4012,13.1736 17.2117,13.2943 16.0566,13.5811 15.5504,13.7102 15.0518,13.8684 14.5635,14.0547L14.5635,13.9834C14.5628,13.9199 14.5574,13.8559 14.5488,13.793 14.526,13.577 14.4609,13.3678 14.3564,13.1777 14.2519,12.9875 14.1103,12.8198 13.9404,12.6855 13.7706,12.5513 13.5755,12.4527 13.3672,12.3955 13.1588,12.3383 12.9407,12.3237 12.7266,12.3525 12.5126,12.3814 12.3061,12.4531 12.1201,12.5635 11.9342,12.6738 11.7722,12.8207 11.6436,12.9951 11.5148,13.1697 11.4223,13.3689 11.3711,13.5801 11.32,13.7911 11.3113,14.0102 11.3457,14.2246L11.5322,15.624C10.9806,15.9935 10.4502,16.3947 9.94336,16.8242 9.07679,17.5664 8.27619,18.3835 7.55176,19.2666L7.55176,19.2783C7.51005,19.3283 7.47231,19.3806 7.43457,19.4346 7.06774,19.965 6.92467,20.6205 7.03711,21.2568 7.14957,21.893 7.50825,22.4586 8.03418,22.8291 8.29571,23.0123 8.59104,23.1416 8.90234,23.21 9.21374,23.2783 9.53597,23.2845 9.84961,23.2275 10.1632,23.1705 10.4625,23.0515 10.7305,22.8779 10.9984,22.7043 11.2297,22.4786 11.4111,22.2148 11.6792,21.8152 11.9677,21.4515 12.2695,21.0918L14.0566,34.5059C14.0649,34.6168 14.1165,34.7203 14.2002,34.793 14.2416,34.8289 14.2899,34.8558 14.3418,34.873 14.3938,34.8903 14.4493,34.8976 14.5039,34.8936 14.5583,34.8894 14.6114,34.8743 14.6602,34.8496 14.7091,34.8248 14.7533,34.7908 14.7891,34.749 14.8248,34.7073 14.852,34.6587 14.8691,34.6064 14.8863,34.5541 14.8927,34.4984 14.8887,34.4434L14.6426,18.8809C14.7558,18.8009 14.8692,18.7186 14.9844,18.6406 15.6729,18.1928 16.4114,17.8281 17.1846,17.5537 17.5649,17.4243 17.954,17.3222 18.3486,17.248 19.5441,17.0169 20.7761,17.0584 21.9531,17.3711 22.7236,17.578 23.4547,17.9131 24.1162,18.3613 24.7664,18.8179 25.3266,19.3922 25.7686,20.0547 26.2187,20.7571 26.5542,21.5275 26.7617,22.3369 26.9737,23.1785 27.0663,24.0464 27.0361,24.9141 27.0017,25.7125 26.868,26.5034 26.6387,27.2686 26.3052,26.948 26.0021,26.5969 25.7334,26.2197 25.2594,25.5322 24.9197,24.7597 24.7324,23.9443 24.5428,23.1003 24.4889,22.2312 24.5732,21.3701 24.5878,21.2243 24.5456,21.0777 24.4551,20.9629 24.3647,20.8482 24.2331,20.774 24.0889,20.7549 23.9445,20.7359 23.7974,20.7737 23.6807,20.8613 23.5641,20.9489 23.4861,21.079 23.4629,21.2236 23.284,22.2068 23.2639,23.2126 23.4033,24.2021 23.5542,25.218 23.8958,26.1959 24.4102,27.083 24.8342,27.7991 25.3518,28.4548 25.9492,29.0322 25.7864,29.3586 25.6095,29.6775 25.4189,29.9893 24.9234,30.7815 24.3541,31.5253 23.7188,32.209 23.0697,32.9 22.3638,33.5349 21.6094,34.1074 20.8383,34.6855 20.0309,35.2129 19.1924,35.6865 17.4739,36.6314 15.6804,37.4312 13.8301,38.0762 13.7111,38.1128 13.6112,38.1951 13.5527,38.3057 13.4943,38.4162 13.4822,38.5462 13.5186,38.666 13.555,38.7856 13.6373,38.8856 13.7471,38.9443 13.8569,39.0031 13.9855,39.0161 14.1045,38.9795 16.0668,38.4705 17.9839,37.7986 19.8359,36.9707 20.7706,36.5356 21.6764,36.0392 22.5469,35.4854 23.4344,34.9227 24.2738,34.2858 25.0557,33.582 25.8444,32.864 26.5626,32.0704 27.1992,31.2129 27.3885,30.9531 27.5698,30.6862 27.7432,30.4131 28.1332,30.6502 28.5389,30.8607 28.957,31.043 30.3883,31.6778 31.9464,31.9694 33.5088,31.8945 34.0374,31.8686 34.5636,31.8015 35.082,31.6943 36.1285,31.4632 37.1292,31.058 38.043,30.4951 38.9637,29.9268 39.7888,29.2147 40.4863,28.3848 41.9129,26.6983 42.7794,24.6045 42.9648,22.3975 43.1533,20.12 42.5812,17.8443 41.3398,15.9307 40.7171,14.9666 39.9446,14.1091 39.0518,13.3916 38.1546,12.6714 37.1493,12.0995 36.0732,11.6982z" />
+            </DrawingGroup>
+        </DrawingImage.Drawing>
+    </DrawingImage>
 
     <DrawingImage x:Key="AppLogo">
         <DrawingImage.Drawing>
@@ -328,6 +344,40 @@
         <ControlTemplate.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter TargetName="MinimizeButtonBorder" Property="Background" Value="{DynamicResource UIForegroundTransparent}"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <Style x:Key="TaskDeleteButtonStyles" TargetType="Border">
+        <Setter Property="Focusable" Value="False"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Width" Value="24"/>
+        <Setter Property="Height" Value="24"/>
+        <Setter Property="CornerRadius" Value="8"/>
+        <Style.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="Padding" Value="4"/>
+                <Setter Property="FontFamily" Value="{StaticResource PrimaryIcon}"/>
+                <Setter Property="FontSize" Value="{StaticResource TaskItemDelete}"/>
+                <Setter Property="Background" Value="{StaticResource Transparent}"/>
+            </Style>
+        </Style.Resources>
+    </Style>
+    <ControlTemplate x:Key="TaskDeleteButton" TargetType="Button">
+        <Border x:Name="DeleteButton" Style="{DynamicResource TaskDeleteButtonStyles}">
+            <TextBlock x:Name="DeleteButton_Icon" Text="N"/>
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="DeleteButton" Property="BorderBrush" Value="{DynamicResource UIError}"/>
+                <Setter TargetName="DeleteButton_Icon" Property="Foreground" Value="{DynamicResource UIError}"/>
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
@@ -621,9 +671,11 @@
     </ControlTemplate>
 
     <!--Titles-->
-    <Style x:Key="BoardTitleTextStyles" TargetType="TextBlock">
-        <Setter Property="Focusable" Value="False"/>
+    <Style x:Key="BoardTitleTextStyles" TargetType="TextBox">
         <Setter Property="Foreground" Value="{DynamicResource UIElements}"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
         <Setter Property="FontSize" Value="{StaticResource Titles}"/>
         <Setter Property="FontStyle" Value="{StaticResource Normal}"/>
@@ -632,6 +684,12 @@
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="TextAlignment" Value="Center"/>
         <Setter Property="Height" Value="32"/>
+        <Setter Property="MinWidth" Value="30"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{DynamicResource UIForegroundTransparent}"/>
+            </Trigger>
+        </Style.Triggers>
     </Style>
 
     <Style x:Key="DateTextStyles" TargetType="Label">
@@ -648,32 +706,48 @@
     </Style>
     
     <!--Tasks-->
+    <Style x:Key="EmptyListMessage" TargetType="TextBlock">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="Foreground" Value="{DynamicResource UIElements}"/>
+        <Setter Property="FontFamily" Value="{StaticResource PrimaryFont}"/>
+        <Setter Property="FontSize" Value="{StaticResource Tasks}"/>
+        <Setter Property="FontStyle" Value="{StaticResource Normal}"/>
+        <Setter Property="FontWeight" Value="{StaticResource Thin}"/>
+        <Setter Property="Visibility" Value="Collapsed"/>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding Tasks.Count}" Value="0">
+                <Setter Property="Visibility" Value="Visible"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
     <Style x:Key="ScrollTaskStyles" TargetType="ScrollViewer">
         <Setter Property="VerticalScrollBarVisibility" Value="Auto"/>
         <Setter Property="HorizontalScrollBarVisibility" Value="Disabled"/>
     </Style>
 
     <Style x:Key="TaskItemSimpleStyles" TargetType="Border">
-        <Setter Property="Focusable" Value="False"/>
         <Setter Property="Background" Value="{DynamicResource Transparent}"/>
         <Setter Property="Padding" Value="0,4"/>
         <Setter Property="Margin" Value="0,2"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Opacity" Value="1"/>
         <Style.Triggers>
             <DataTrigger Binding="{Binding IsCompleted}" Value="True">
                 <DataTrigger.EnterActions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <DoubleAnimation Storyboard.TargetProperty="Opacity" To="0.4" Duration="0:0:0.5"/>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" To="0.4" Duration="0:0:0.2"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </DataTrigger.EnterActions>
                 <DataTrigger.ExitActions>
                     <BeginStoryboard>
                         <Storyboard>
-                            <DoubleAnimation Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.5"/>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:0.2"/>
                         </Storyboard>
                     </BeginStoryboard>
                 </DataTrigger.ExitActions>
@@ -690,6 +764,8 @@
                 <Setter Property="VerticalAlignment" Value="Top"/>
                 <Setter Property="HorizontalAlignment" Value="Center"/>
                 <Setter Property="Margin" Value="0,0,4,0"/>
+                <Setter Property="Width" Value="24"/>
+                <Setter Property="Height" Value="24"/>
             </Style>
             <Style TargetType="TextBlock">
                 <Setter Property="Focusable" Value="False"/>
@@ -703,22 +779,29 @@
                 <Setter Property="Margin" Value="0,0,4,0"/>
                 <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
             </Style>
-            <Style TargetType="Button">
+
+            <Style TargetType="ToggleButton">
                 <Setter Property="Focusable" Value="False"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="VerticalAlignment" Value="Stretch"/>
+                <Setter Property="Background" Value="Transparent"/>
                 <Setter Property="BorderThickness" Value="0"/>
-                <Setter Property="Width" Value="24"/>
-                <Setter Property="Height" Value="24"/>
-                <Setter Property="VerticalAlignment" Value="Top"/>
-                <Setter Property="HorizontalAlignment" Value="Center"/>
-                <Setter Property="FontFamily" Value="{StaticResource PrimaryIcon}"/>
-                <Setter Property="FontSize" Value="{StaticResource TaskItemDelete}"/>
-                <Setter Property="Content" Value="{StaticResource CloseIcon}"/>
-                <Setter Property="Background" Value="{StaticResource Transparent}"/>
-                <Setter Property="Cursor" Value="Hand"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="ToggleButton">
+                            <ContentPresenter/>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
             </Style>
         </Style.Resources>
     </Style>
 
+    <Style TargetType="ToolTip">
+        <Setter Property="Background" Value="{StaticResource UIElements}"/>
+        <Setter Property="Foreground" Value="{StaticResource UIForeground}"/>
+        <Setter Property="BorderThickness" Value="0"/>
+    </Style>
 
 
 </ResourceDictionary>

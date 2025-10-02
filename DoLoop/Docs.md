@@ -3,61 +3,11 @@
 
 ## <h2 id="contx"> Table of contents </h2>
 1. [Introductions](#intro)
-2. [Scheduls](#scheduls)
 
----
-###### Project Initiation Date : Jul 24 | 2 Mordad
+
+--- 
 
 #### Introduction <a name="intro">
-
-#### To Do (Tasks): <a name="ToDo">
-
-1. Define Styles [x]
-1. theme [x] 
-1. base layout of the app [x]
-1. Config window screen (resizable but no full screen) [x]
-1. control styles [x]
-1. add controls to main [x]
-1. [ ] task styles(Normal/Impro...)
-1. [x] Board Icon fix
-1. [ ] UI control fucntinos
-1. [ ] other tabs(list/settings) setup
-
-
-#### Scheduls <a name="scheduls">
-
-##### 1. Week 1 – Core Infrastructure
-| Task | Estimated sprint | Start / Finish Date | Status |
-| :- | :- | :-: | :-: | 
-| Set up MVVM base (models, viewmodels, folders) | 1 days | Jul 25 - 25 | x |
-| Data binding, basic UI layout  | 2 days | Jul 27 - 31 | x |
-| Add & delete tasks | 2 days |  |  |
-| Task types & icons | 2 days |  |  |
-
-##### 2. Week 2 – Boards & Storage
-| Task | Estimated sprint | Start / Finish Date | Status |
-| :- | :- | :-: | :-: | 
-| Board switching logic | 2 days |  |  |
-| Board history by date | 2 days |  |  |
-| Saving/loading (probably with local JSON) | 2-3 days |  |  |
-
-
-##### 3. Week 3 – Settings + Polish
-| Task | Estimated sprint | Start / Finish Date | Status |
-| :- | :- | :-: | :-: | 
-| Theme support (at least 2 themes) | 2 days |  |  |
-| Settings View & logic | 2 days |  |  |
-| Animations/UX polish | 2-3 days |  |  |
-
-
-##### 4. Week 4 – Final Touches
-| Task | Estimated sprint | Start / Finish Date | Status |
-| :- | :- | :-: | :-: | 
-| Bugs, responsive resizing, cleanup | 2 days |  |  |
-| Code organization & refactor | 2 days |  |  |
-| Publish/packaging | 2 days |  |  |
-
-
 
 
 

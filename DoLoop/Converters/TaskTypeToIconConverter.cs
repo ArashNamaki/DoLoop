@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using System.Windows.Data;
+using DoLoop.Models;
 
 namespace DoLoop.Converters
 {
