@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DoLoop")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c2d4f4c103489dada692896b1551f351ef75c1d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3316fda77df64f0db2a3cd2a70a70d2df9d388da")]
 [assembly: System.Reflection.AssemblyProductAttribute("DoLoop")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DoLoop")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
